@@ -1,0 +1,180 @@
+Research Data Management:
+  aliases: ["RDM"]
+  def: |
+    Coordinated activities that support the creation, organisation, documentation,
+    storage, preservation, and sharing of research data across its operational
+    states (Active, Closed, Locked, Archived, Published).
+
+Data Governance:
+  aliases: ["Governance"]
+  def: |
+    The organisational framework of policies, roles, and standards that ensures
+    data is managed consistently, securely, and ethically throughout its lifecycle.
+
+Data Stewardship:
+  aliases: ["Stewardship"]
+  def: |
+    The ongoing care and oversight of research data to ensure its quality,
+    accessibility, and long‑term value across transitions between data states.
+
+Data Steward:
+  aliases: ["Steward"]
+  def: |
+    A professional who supports researchers by advising on metadata, provenance,
+    lifecycle transitions, and FAIR implementation.
+
+RDM Life Cycle:
+  aliases: ["Research Data Life Cycle", "Data Lifecycle", "Data Life Cycle"]
+  def: |
+    The progression of data from working files to curated outputs, represented as
+    Process, Analyse, Archived, and Published, aligned with the five operational
+    data states.
+
+FAIR:
+  aliases: ["FAIR Principles", "FAIR Data", "FAIR Guidelines"]
+  def: |
+    Principles that make data Findable, Accessible, Interoperable, and Reusable,
+    applied differently across lifecycle stages as data matures and stabilises.
+
+Open Science:
+  aliases: ["Open Research", "Open Scholarship"]
+  def: |
+    A movement promoting transparency, accessibility, and collaboration in
+    research, including open data, open methods, and open access publishing.
+
+Open Data:
+  aliases: ["Open Research Data"]
+  def: |
+    Data that is freely accessible and reusable by anyone, typically under an open
+    licence; a possible outcome of the Published state.
+
+Big Data:
+  aliases: ["Large‑scale Data"]
+  def: |
+    Large, fast‑growing, or complex datasets whose characteristics influence
+    storage, compute, metadata, and preservation strategies.
+
+Data Integrity:
+  aliases: ["Integrity"]
+  def: |
+    The accuracy, completeness, and consistency of data across its lifecycle,
+    supported by provenance, versioning, fixity checks, and controlled transitions.
+
+Reproducible Research:
+  aliases: ["Reproducibility"]
+  def: |
+    Research whose results can be recreated using the same data, code, and methods,
+    enabled by provenance capture, stable digital objects, and transparent
+    publication.
+
+Data Wrangling:
+  aliases: ["Data Cleaning", "Data Preparation"]
+  def: |
+    The cleaning, transforming, and structuring of raw data, central to the Process
+    and Analyse stages and foundational for provenance and later stewardship.
+
+Digital Object:
+  aliases: ["Data Object"]
+  def: |
+    A structured unit of digital information composed of content, metadata, and a
+    persistent identifier, enabling reliable storage, interpretation, preservation,
+    and reuse.
+
+Files:
+  aliases: ["Bitstreams", "File", "Bitstream"]
+  def: |
+    The digital content of a digital object, stored as one or more files such as
+    documents, images, datasets, or software packages.
+
+Metadata:
+  aliases: ["Descriptive Metadata", "Technical Metadata", "Structural Metadata"]
+  def: |
+    Information that explains and contextualises the files in a digital object,
+    describing what they are, how they were created, how they can be interpreted,
+    and how they should be managed.
+
+Persistent Identifier:
+  aliases: ["PID", "DOI", "Handle", "ARK", "Persistent ID"]
+  def: |
+    A stable, globally unique reference that ensures a digital object can be
+    identified, found, cited, and linked over time, independent of its storage
+    location.
+
+Content:
+  aliases: ["Digital Content"]
+  def: |
+    The substantive information contained in the files of a digital object.
+
+Context:
+  aliases: ["Object Context"]
+  def: |
+    The metadata and relationships that explain how a digital object was created,
+    how it should be interpreted, and how it relates to other objects.
+
+Identity:
+  aliases: ["Object Identity"]
+  def: |
+    The stable, citable reference to a digital object, anchored by its persistent
+    identifier and supported by metadata.
+
+Landing Page:
+  aliases: ["Metadata Landing Page", "PID Landing Page"]
+  def: |
+    A metadata record or webpage that a persistent identifier resolves to, providing
+    information about the digital object and how to access its files.
+
+Versioning:
+  aliases: ["Data Versioning", "Object Versioning"]
+  def: |
+    The practice of recording updates or changes to a digital object while keeping
+    earlier states accessible and citable.
+
+Fixity:
+  aliases: ["Checksum", "Hash", "Fixity Check"]
+  def: |
+    Methods for verifying the integrity of files by detecting corruption or
+    tampering through checksums or hashes.
+
+Provenance:
+  aliases: ["Data Provenance", "Lineage"]
+  def: |
+    Documentation of how data was created, transformed, and derived, including
+    relationships such as raw → processed → analysed.
+
+Data Lineage:
+  aliases: ["Lineage Graph", "Object Lineage"]
+  def: |
+    The chain of related digital objects showing how one object was derived from
+    another across processing stages.
+
+Interoperability:
+  aliases: ["Data Interoperability"]
+  def: |
+    The ability of different systems and tools to exchange, interpret, and use a
+    digital object consistently across platforms.
+
+Reusability:
+  aliases: ["Data Reuse"]
+  def: |
+    The capacity for a digital object to be understood and used in new contexts,
+    supported by clear metadata and stable identifiers.
+
+Preservation:
+  aliases: ["Digital Preservation"]
+  def: |
+    Ensuring long‑term accessibility and usability of digital objects as formats,
+    platforms, and storage systems evolve.
+
+Citation:
+  aliases: ["Data Citation", "Object Citation"]
+  def: |
+    The practice of referencing a digital object using its persistent identifier to
+    support attribution, reproducibility, and tracking.
+
+Replica:
+  aliases: ["Replicas", "File Replicas"]
+  def: |
+    Copies of a digital object's files stored across different systems to improve
+    resilience, performance, and preservation without changing the object's
+    identity.
+

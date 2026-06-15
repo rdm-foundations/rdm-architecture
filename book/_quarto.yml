@@ -58,6 +58,16 @@ book:
   
 bibliography: references.bib
 
+filters:
+  - debruine/quarto-glossary
+
+
+glossary:
+  path: glossary.yml
+  popup: hover
+  show: true
+
+
 format:
   html:
     theme: cosmo

@@ -1,66 +1,52 @@
 # Definitions
 
-Understanding research data requires a shared vocabulary. Before we can describe how data evolves, how it becomes a digital object, or how FAIR principles apply at different stages, we need clear definitions of the core concepts that shape modern research data management. These terms, Research Data Management, stewardship, governance, FAIR, reproducibility, form the conceptual scaffolding for everything that follows in this book.
+Understanding research data requires a shared vocabulary. Before we can describe how data evolves, how it becomes a {{< glossary "Digital Object" >}}, or how {{< glossary "FAIR" >}} principles apply at different stages, we need clear definitions of the core concepts that shape modern {{< glossary "Research Data Management" >}}. These terms—{{< glossary "Research Data Management" >}}, {{< glossary "Data Stewardship" >}}, {{< glossary "Data Governance" >}}, {{< glossary "FAIR" >}}, {{< glossary "Reproducible Research" >}}—form the conceptual scaffolding for everything that follows in this book.
 
 The definitions below provide the foundation for that discussion. They establish the key ideas that will be expanded, operationalised, and connected to infrastructure design in the chapters ahead.
 
 ### Research Data Management
-**Research Data Management (RDM)** refers to the coordinated activities that support the creation, organisation, documentation, storage, preservation, and sharing of digital research data.  
-It ensures that data remains **usable, trustworthy, and well‑governed** throughout its evolution, from volatile working files to curated, citable digital objects.
+**{{< glossary "Research Data Management" >}} (RDM)** refers to the coordinated activities that support the creation, organisation, documentation, storage, preservation, and sharing of digital research data.  
+It ensures that data remains **usable, trustworthy, and well‑governed** throughout its evolution, from volatile working files to curated, citable {{< glossary "Digital Object" >}}s.
 
-**In this book** we align Research Data Management with the idea that data moves through **distinct operational states** (Active, Closed, Locked, Archived, Published), each requiring different services, metadata, and governance.
+**In this book** we align RDM with the idea that data moves through **distinct operational states** (Active, Closed, Locked, Archived, Published), each requiring different services, {{< glossary "Metadata" >}}, and governance.
 
 ### Data Governance
-**Data Governance** is the organisational framework that defines how data is managed across its lifecycle.  
+**{{< glossary "Data Governance" >}}** is the organisational framework that defines how data is managed across its lifecycle.  
 It includes policies, roles, responsibilities, standards, and decision‑making processes that ensure data is handled **consistently, securely, and ethically**.
 
 In the context of the lifecycle, governance determines:
 
 - who can access data at each state  
-- how metadata and provenance must be captured  
+- how {{< glossary "Metadata" >}} and {{< glossary "Provenance" >}} must be captured  
 - which data should be preserved or published  
-- how FAIR responsibilities are distributed  
-
-*References*
-
-- <https://en.wikipedia.org/wiki/Data_governance>
+- how {{< glossary "FAIR" >}} responsibilities are distributed  
 
 ### Data Stewardship and Data Stewards
-**Data Stewardship** is the ongoing care and oversight of research data to ensure its quality, accessibility, and long‑term value.
+**{{< glossary "Data Stewardship" >}}** is the ongoing care and oversight of research data to ensure its quality, accessibility, and long‑term value.
 
-A **Data Steward** supports researchers by:
+A **{{< glossary "Data Steward" >}}** supports researchers by:
 
-- advising on metadata and standards  
-- ensuring provenance is captured early  
+- advising on {{< glossary "Metadata" >}} and standards  
+- ensuring {{< glossary "Provenance" >}} is captured early  
 - guiding transitions between data states  
 - preparing data for archiving or publication  
-- ensuring FAIR principles are applied appropriately  
+- ensuring {{< glossary "FAIR" >}} principles are applied appropriately  
 
 Stewardship becomes increasingly important as data moves from **Active** to **Closed**, **Locked**, and **Archived** states.
 
-*References*
-
-- <https://web.archive.org/web/20220121022346/https://www.simplilearn.com/what-is-data-stewardship-article>
-- <https://en.wikipedia.org/wiki/Data_steward>
-
-
 ### RDM Life Cycle
-The **RDM Life Cycle** describes how data evolves from volatile working files to curated, citable outputs.  
+The **{{< glossary "RDM Life Cycle" >}}** describes how data evolves from volatile working files to curated, citable outputs.  
 Although models vary, the lifecycle can be understood through the four conceptual stages used in this book:
 
 1. **Process** — active research, working files, rapid iteration  
-2. **Analyse** — stabilising results, consolidating provenance  
-3. **Archived** — digital objects under institutional stewardship  
+2. **Analyse** — stabilising results, consolidating {{< glossary "Provenance" >}}  
+3. **Archived** — {{< glossary "Digital Object" >}}s under institutional stewardship  
 4. **Published** — curated, citable outputs for global reuse  
 
 These stages correspond directly to the **five operational data states** (Active → Closed → Locked → Archived → Published) described in the following chapter.
 
-*References*
-
-- <https://doi.org/10.1145/1378889.1378998>
-
 ### FAIR
-**FAIR** describes the *desired behaviour* of data and metadata so they can be discovered, accessed, combined, and reused by humans and machines.  
+**{{< glossary "FAIR" >}}** describes the *desired behaviour* of data and {{< glossary "Metadata" >}} so they can be discovered, accessed, combined, and reused by humans and machines.  
 It stands for **Findable, Accessible, Interoperable, Reusable**.
 
 FAIR is not a binary property and not limited to published data.  
@@ -72,85 +58,51 @@ In this book we explain how FAIR applies differently across the lifecycle:
 
 FAIRness grows as data matures and becomes more stable.
 
-We will dive deeper into the relationship between the FAIR principles and the Research Data Life Cycle in the next chapter.
-
-*References*
-
-- <https://www.go-fair.org/fair-principles/>
-- <https://www.nature.com/articles/sdata201618>
-
 ### Open Science / Open Research
-**Open Science** is a movement promoting transparency, accessibility, and collaboration in research.  
-It includes open data, open methods, open access publishing, and open educational resources.
+**{{< glossary "Open Science" >}}** is a movement promoting transparency, accessibility, and collaboration in research.  
+It includes {{< glossary "Open Data" >}}, open methods, open access publishing, and open educational resources.
 
-Open Science intersects with FAIR but is not identical:  
+Open Science intersects with {{< glossary "FAIR" >}} but is not identical:  
 FAIR describes *how* data should behave; Open Science describes *how research should be shared*.
 
-*References*
-
-- <https://en.wikipedia.org/wiki/Open_science>
-- <https://book.the-turing-way.org/reproducible-research/open/>
-
 ### Open Data
-**Open Data** refers to datasets that are freely accessible and reusable by anyone, typically under an open licence.  
+**{{< glossary "Open Data" >}}** refers to datasets that are freely accessible and reusable by anyone, typically under an open licence.  
 Open data is one possible outcome of the lifecycle—specifically the **Published** state—but not all FAIR data is open.
 
-*References*
-
-- <https://book.the-turing-way.org/reproducible-research/open/open-data/>
-
-
 ### Big Data
-**Big Data** refers to datasets that are large, fast‑growing, or highly complex.  
+**{{< glossary "Big Data" >}}** refers to datasets that are large, fast‑growing, or highly complex.  
 Their characteristics (volume, velocity, variety, etc.) influence:
 
 - storage choices in the **Active** and **Closed** states  
 - compute requirements  
-- metadata capture  
+- {{< glossary "Metadata" >}} capture  
 - long‑term preservation strategies  
 
-*References*
-
-- <https://en.wikipedia.org/wiki/Big_data>
-
 ### Data Integrity
-**Data Integrity** means that data remains accurate, complete, and consistent throughout its lifecycle.  
+**{{< glossary "Data Integrity" >}}** means that data remains accurate, complete, and consistent throughout its lifecycle.  
 It is protected through:
 
-- provenance metadata  
+- {{< glossary "Provenance" >}} metadata  
 - version control  
-- fixity checks  
+- {{< glossary "Fixity" >}} checks  
 - controlled transitions between data states  
 
 Integrity is essential for both stewardship and reuse.
 
-*References*
-
-- <https://en.wikipedia.org/wiki/Data_integrity>
-
 ### Reproducible Research
-**Reproducible Research** is research where results can be recreated using the same data, code, and methods.  
+**{{< glossary "Reproducible Research" >}}** is research where results can be recreated using the same data, code, and methods.  
 Reproducibility depends on:
 
-- early provenance capture (Active/Closed)  
-- stable digital objects (Archived)  
+- early {{< glossary "Provenance" >}} capture (Active/Closed)  
+- stable {{< glossary "Digital Object" >}}s (Archived)  
 - transparent publication (Published)  
 
 It is a core motivation for FAIR‑for‑Teams and FAIR‑for‑Reuse.
 
-*References*
-
-- <https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/>
-- <https://en.wikipedia.org/wiki/Reproducibility>
-
 ### Data Wrangling
-**Data Wrangling** is the process of cleaning, transforming, and structuring raw data.  
+**{{< glossary "Data Wrangling" >}}** is the process of cleaning, transforming, and structuring raw data.  
 It is a central activity in the **Process** and **Analyse** stages and contributes to:
 
-- provenance  
+- {{< glossary "Provenance" >}}  
 - internal FAIRness  
 - preparation for later stewardship
-
-*References*
-
-- <https://en.wikipedia.org/wiki/Data_wrangling>
