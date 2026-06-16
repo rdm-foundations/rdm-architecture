@@ -2,6 +2,13 @@
 
 A **digital (or data) object** is a self‑contained, structured unit of information that exists in electronic form. It is more than just raw bits: it is a combination of **content**, **context**, and **identity** that allows computers and humans to store, interpret, preserve, and reuse information reliably.
 
+::: {.callout-tip title="Digital Object ≠ File"
+}
+A digital object is more than a file. It combines **content**, **context**, and **identity**, making it interpretable, preservable, and citable across systems and over time.
+
+:::
+
+
 At its core, a digital object consists of **three interdependent components**:
 
 - [**Bitstream(s) or File(s)**](files.qmd) — the actual digital content, stored as one or more files. These may be documents, images, audio recordings, videos, datasets, software packages, or any other digital material. On their own, files are simply encoded data; they require context to be meaningful. 
@@ -37,6 +44,13 @@ These three parts form a **single functional entity**:
 - The **files** hold the content.  
 - The **metadata** explains the content and enables interpretation.  
 - The **persistent identifier** ensures the object can always be located and referenced.
+
+::: {.callout-tip title="A Digital Object Is a Single Entity"}
+
+Although files, metadata, and identifiers may be stored separately, they function together as one coherent object. Each part depends on the others to provide meaning, access, and persistence.
+
+:::
+
 
 If any one of these components is missing, the digital object becomes incomplete. Files without metadata are uninterpretable; metadata without files is empty description; and neither files nor metadata are useful if they cannot be reliably identified and located.
 

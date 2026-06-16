@@ -5,6 +5,11 @@ Metadata becomes truly powerful only when it can be **shared, discovered, aggreg
 
 This chapter introduces the main components of that infrastructure: **metadata portals**, **metadata harvesters**, **indexing services**, and the **serialisation formats** that allow metadata to move between systems.
 
+::: {.callout-tip title="Metadata Needs Infrastructure"}
+Metadata becomes powerful only when it can be **shared, aggregated, and reused** across systems.  
+Without supporting infrastructure, even well‑structured metadata remains isolated and hard to discover.
+:::
+
 
 ## Why Local Metadata Alone Is Not Enough
 
@@ -19,6 +24,12 @@ Creating a metadata record inside a repository is essential, but **metadata that
 
 In other words, **metadata is only as useful as the infrastructure that distributes it**.
 
+::: {.callout-tip title="Local Metadata Is Not Discoverable Metadata"}
+A dataset may be perfectly documented, but if its metadata is not exposed through  
+**standardised, machine‑readable interfaces**, it remains invisible to the wider research ecosystem.
+:::
+
+
 Several factors limit the findability of “local‑only” metadata:
 
 - **Siloing** — each repository stores metadata in its own database, often with its own schema  
@@ -32,6 +43,13 @@ This is why FAIR emphasises that metadata must be **findable and accessible**, n
 To achieve this, repositories must expose metadata through **standard protocols** (e.g., OAI‑PMH, ResourceSync, REST APIs) so that external services can collect and index it.
 
 The Figure below shows the architecture to make metadata actionable for researchers and machines. The nodes in light green denote the components that directly interact with users and machines and which you might have already used.
+
+::: {.callout-tip title="From Local Records to Global Discovery"}
+Metadata infrastructure connects **local repositories** to **global discovery systems**  
+through harvesting, indexing, and portal services.  
+This flow enables researchers and machines to find and reuse data across platforms.
+:::
+
 
 ```{mermaid}
 %%| label: fig-metadata-flow
@@ -93,6 +111,13 @@ We will now go through the single aspects of the metadata infrastructure.
 
 ## Metadata Portals
 
+::: {.callout-tip title="Portals Are the Public Face of Metadata"}
+Metadata portals provide the **entry point** for discovery.  
+They expose metadata through search interfaces, APIs, and landing pages,  
+linking datasets to identifiers, vocabularies, and related research outputs.
+:::
+
+
 **Metadata portals** are platforms that provide human‑ and machine‑readable access to metadata records. They act as central entry points for discovering datasets, publications, software, and other research outputs.
 
 Portals typically:
@@ -116,6 +141,12 @@ Portals are the *public face* of metadata: they make research outputs discoverab
 ## Metadata Harvesters
 
 Metadata harvesters solve the visibility problem by **collecting metadata from many repositories** and bringing it together into a unified index. They ensure that metadata created locally becomes part of a broader, interoperable ecosystem.
+
+::: {.callout-tip title="Harvesters Solve Metadata Visibility"}
+Metadata harvesters ensure that **locally created metadata becomes globally discoverable**.  
+They collect records from many repositories and integrate them into broader ecosystems.
+:::
+
 
 Harvesters typically:
 
@@ -144,9 +175,21 @@ Harvesters typically:
 
 Harvesters are the *connective tissue* of metadata infrastructure: they ensure that metadata does not remain siloed.
 
+::: {.callout-tip title="Harvesters as Connective Tissue"}
+Harvesters link **local repositories** to **global discovery systems**.  
+They ensure that metadata does not remain isolated but becomes part of a wider research graph.
+:::
+
+
 ## What Is a Metadata Indexer?
 
 A **metadata indexer** is a service that takes harvested metadata and organises it into a **searchable, structured index**.
+
+::: {.callout-tip title="Harvesters vs. Indexers"}
+Harvesters **collect** metadata.  
+Indexers **organise and structure** it so that it becomes searchable, linkable, and analysable.
+:::
+
 
 Indexers:
 
@@ -173,6 +216,12 @@ Indexers turn metadata into **actionable information**, enabling discovery, anal
 
 ## Comparison of Metadata Portals, Harvesters, and Indexers
 
+::: {.callout-tip title="Three Complementary Roles"}
+Portals, harvesters, and indexers form a **pipeline**:  
+harvesters collect metadata, indexers structure it, and portals expose it for discovery.
+:::
+
+
 | Component | Purpose | Operates On | Key Functions | Examples |
 |----------|---------|-------------|----------------|----------|
 | **Metadata Portal** | Human‑ and machine‑friendly discovery | Indexed metadata | Search, landing pages, APIs, PID linking | DataCite Commons, OpenAIRE Explore |
@@ -186,6 +235,13 @@ Indexers turn metadata into **actionable information**, enabling discovery, anal
 
 To move metadata between systems, it must be expressed in **serialisation formats** that machines can read. These formats encode metadata according to schemas, ontologies, and controlled vocabularies.
 
+::: {.callout-tip title="Why Serialisation Matters"}
+Serialisation formats determine **how metadata travels between systems**,  
+how it can be validated, and whether it supports **semantic interoperability**.  
+They are the backbone of machine‑readable metadata exchange.
+:::
+
+
 Serialisation formats fall into two broad categories:
 
 ### 1. Key–Value and Document‑Oriented Formats
@@ -198,6 +254,13 @@ These formats are widely used in repositories, APIs, and metadata templates.
 - **CSV / TSV** — often used for simple metadata templates or variable‑level metadata  
 
 These formats are easy to generate and consume, but relationships between entities are implicit.
+
+::: {.callout-tip title="Key–Value Formats: Simple but Limited"}
+JSON, XML, YAML, and CSV are easy to create and consume,  
+but they express relationships **implicitly**, not semantically.  
+They are ideal for templates, APIs, and lightweight metadata.
+:::
+
 
 ### 2. Semantic Web and Linked Data Formats
 
@@ -214,6 +277,13 @@ These formats encode metadata as **subject–predicate–object triples**, using
 - ontology‑driven metadata  
 - schema.org markup for dataset discovery  
 - provenance tracking (e.g., PROV‑O)  
+
+::: {.callout-tip title="Semantic Formats Enable FAIR Metadata"}
+RDF, Turtle, JSON‑LD, and related formats express metadata as **graphs**  
+with globally unique identifiers.  
+This enables **machine reasoning, linking, and interoperability** across systems.
+:::
+
 
 ### Why serialisation matters
 
@@ -240,6 +310,11 @@ The metadata fields are:
 - **issued**: 2024  
 - **subject**: Soil Moisture  
 
+::: {.callout-tip title="Same Metadata, Different Serialisations"}
+The same metadata can be expressed in many formats.  
+What changes is the **structure**, **semantics**, and **machine‑readability**  
+— not the underlying information.
+:::
 
 #### **JSON (Key–Value Metadata)**
 
@@ -306,6 +381,12 @@ ex:dataset1
 | **Turtle (RDF)** | ◑ | ✔✔ | ✔✔ | Linked Data, knowledge graphs, FAIR metadata |
 
 
+::: {.callout-tip title="Choosing the Right Format"}
+No single serialisation fits all use cases.  
+The choice depends on whether the priority is **simplicity**, **validation**,  
+or **semantic interoperability**.
+:::
+
 ### When to Choose Which Serialisation Format?
 
 Different serialisation formats serve different purposes, and the right choice depends on how the metadata will be used.
@@ -351,6 +432,13 @@ Together, these components form the **metadata infrastructure** that enables FAI
 
 Linked Data changes how metadata is shared and connected across research infrastructures. Instead of exchanging whole records through harvesting protocols, repositories can publish their metadata directly as RDF using persistent identifiers (DOIs, ORCID iDs, ROR IDs) and shared vocabularies. This allows metadata to be expressed as a graph, where entities are nodes and their relationships are edges.
 
+::: {.callout-tip title="Linked Data Changes the Model"}
+Linked Data replaces record‑based exchange with **graph‑based publishing**,  
+where entities are identified by persistent URIs and relationships are explicit.  
+This enables seamless linking across repositories and infrastructures.
+:::
+
+
 Repositories can expose RDF in several ways:
 
 - **Static RDF files** (e.g., Turtle or JSON‑LD generated on demand or published as dumps)  
@@ -360,13 +448,40 @@ Repositories can expose RDF in several ways:
 
 Only the last option requires a triple store; the others simply generate RDF from the repository’s internal metadata model.
 
+::: {.callout-tip title="You Don’t Need a Triple Store to Publish RDF"}
+Most repositories can publish RDF **without** running a triple store.  
+Static files, content negotiation, and RDF‑enabled APIs already support  
+FAIR, machine‑readable metadata exposure.
+:::
+
+
 A **triple store** is a specialised database designed to store and query RDF triples—statements in the form *subject–predicate–object*. It supports SPARQL queries, reasoning, and graph traversal, and can automatically merge graphs from different sources when they use the same identifiers. If two repositories describe the same dataset, person, or organisation using the same URI, a triple store treats them as the same node. No custom mapping or harmonisation layer is required; the semantics are embedded directly in the data model.
 
+::: {.callout-tip title="Why Triple Stores Matter"}
+Triple stores treat metadata as a **graph**, enabling SPARQL queries,  
+reasoning, and automatic merging of entities that share the same identifiers.  
+They are the backbone of large‑scale knowledge graphs.
+:::
+
+
 This makes combining knowledge graphs remarkably straightforward. Multiple RDF sources can be loaded into the same triple store, and shared identifiers cause the graphs to interlink automatically. The infrastructure does not need to normalise formats, deduplicate records, or align schemas—the graph model handles this naturally.
+
+::: {.callout-tip title="Shared Identifiers Do the Heavy Lifting"}
+When repositories use the same URIs for datasets, people, and organisations,  
+graphs interlink **automatically**. No custom mapping or deduplication is needed.
+:::
+
 
 Because of this, Linked Data reduces the need for traditional metadata harvesters. A harvester normally collects XML or JSON from many repositories, normalises it, deduplicates it, and prepares it for indexing. In a Linked Data environment, much of this work disappears: repositories publish RDF, and the triple store ingests it directly. The infrastructure no longer needs to “fix” metadata during harvesting.
 
 However, this convenience for infrastructures shifts responsibility upstream. For Linked Data to work well, researchers and data stewards must provide clean identifiers, consistent vocabularies, and well‑structured RDF. Instead of the infrastructure harmonising metadata after the fact, the quality and interoperability of the combined graph depend on the metadata producers themselves.
+
+::: {.callout-tip title="Graph‑Native Infrastructure"}
+Triple stores simplify integration for infrastructures,  
+but require **careful modelling and identifier discipline** at the source.  
+When done well, the result is a richly connected, machine‑interpretable ecosystem.
+:::
+
 
 In short: **triple stores make integration easier for infrastructures, but require more discipline and modelling effort from researchers**. When done well, the result is a metadata ecosystem that is inherently connected, machine‑interpretable, and ready for reuse across systems.
 

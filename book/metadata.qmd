@@ -4,6 +4,12 @@
 
 In the context of Research Data Management (RDM), **metadata** is structured information that describes, explains, and contextualises a digital object—such as a dataset, document, image, or software file. It acts as a layer of documentation that makes a digital object **findable, understandable, and reusable**, both now and in the future.
 
+::: {.callout-tip title="Why Metadata Matters"}
+Metadata makes digital objects **findable, understandable, and reusable**.  
+Without metadata, data becomes difficult to interpret, verify, or integrate into new research.
+:::
+
+
 Metadata typically captures:
 
 * **Content information** — what the object contains
@@ -14,8 +20,11 @@ Metadata typically captures:
 
 In short, metadata provides the context needed to interpret and reuse data beyond its original purpose.
 
-::: {.blank}
+::: {.callout-tip title="Metadata Is Context"}
+Metadata captures **what the data is**, **how it was created**, **how it can be reused**,  
+and **how it relates to other objects**. Examples help illustrate how these fields work together in practice.
 :::
+
 
 #### A fictive example for a published dataset  
 
@@ -67,9 +76,20 @@ In short, metadata provides the context needed to interpret and reuse data beyon
 
 **Understanding the Building Blocks of Structured Research Metadata**
 
+::: {.callout-tip title="Four Building Blocks of Structured Metadata"}
+High‑quality metadata relies on four layers working together:  
+**controlled vocabularies** (terms), **ontologies** (relationships),  
+**schemas** (fields), and **templates** (forms).  
+Understanding their roles improves consistency and interoperability.
+:::
+
 In Research Data Management, terms such as *ontologies*, *controlled vocabularies*, *metadata schemas*, and *metadata templates* are often used together. While closely related, they serve distinct roles. Together, they ensure that research outputs are described in a consistent, machine-readable, and interoperable way.
 
 ### Controlled Vocabularies
+
+::: {.callout-tip title="Why Use Controlled Vocabularies?"}
+Controlled vocabularies reduce ambiguity, improve searchability, and ensure that different datasets use the **same terms for the same concepts**.
+:::
 
 **Controlled vocabularies** are curated lists of approved terms used to describe data consistently.
 
@@ -89,6 +109,11 @@ When a metadata field requires a *subject keyword*, a controlled vocabulary ensu
 
 ##  Ontologies
 
+::: {.callout-tip title="Ontologies Add Meaning"}
+Ontologies don’t just list terms — they define **how concepts relate**.  
+This enables smarter search, automated reasoning, and richer data integration.
+:::
+
 **Ontologies** extend controlled vocabularies by not only defining terms, but also specifying the **relationships between them**.
 
 They:
@@ -104,6 +129,7 @@ They:
 * [PROV-O](https://www.w3.org/TR/prov-o/) (Provenance Ontology)
 
 Ontologies allow machines to understand that terms like “precipitation” and “rainfall” are related, enabling more intelligent search and data integration.
+
 
 ## Metadata Schemas
 
@@ -134,6 +160,11 @@ A metadata schema tells you *what information to provide*, such as:
 Importantly, it does **not** define which terms to use—that is the role of controlled vocabularies.
 
 ## Metadata Templates
+
+::: {.callout-tip title="Templates Bridge Theory and Practice"}
+Researchers rarely interact with schemas directly.  
+Templates turn schemas into **usable forms**, guiding consistent metadata creation.
+:::
 
 A **metadata template** is a practical, user-friendly implementation of a metadata schema.
 
@@ -211,7 +242,13 @@ Key–value metadata forms the foundation of most metadata practices.
 
 ## Linked Data
 
+::: {.callout-tip title="Linked Data in One Sentence"}
+Linked Data expresses information as **subject–predicate–object triples**,  
+turning metadata into a **network of meaning** rather than isolated fields.
+:::
+
 Linked Data is a more advanced, semantic approach that represents metadata as interconnected statements.
+
 
 ### Core idea
 
@@ -238,6 +275,7 @@ Each element is identified by a **URI**, ensuring global uniqueness.
 * Templates may generate Linked Data automatically
 
 Linked Data turns metadata into a **network of meaning**, rather than a collection of fields.
+
 
 ## A Simple Comparison
 
@@ -318,6 +356,12 @@ This is the essential shift: from *fields with values* to *entities with relatio
 
 To serialise such a graph, we use a Linked Data format such as Turtle:
 
+::: {.callout-tip title="Why Turtle?"}
+Turtle is a compact, human‑readable syntax for RDF.  
+It expresses metadata as **URIs and relationships**, enabling global interoperability.
+:::
+
+
 ```turtle
 @prefix dc:     <http://purl.org/dc/elements/1.1/> .
 @prefix dct:    <http://purl.org/dc/terms/> .
@@ -372,6 +416,12 @@ We explore metadata serialisation and metadata infrastructure in more detail in 
 
 
 ## Bringing It All Together
+
+::: {.callout-tip title="The Metadata Ecosystem"}
+Vocabularies give meaning, schemas give structure, templates guide practice,  
+and Linked Data connects everything into a machine‑readable whole.
+:::
+
 
 * Key–value metadata is the **practical starting point**
 * Linked Data is the **semantic, interoperable extension**
