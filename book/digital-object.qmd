@@ -1,5 +1,7 @@
 # The Digital Object
 
+In the previous chapter we saw that data must be managed as structured digital objects. This chapter defines what those objects are.
+
 A digital (or data) object is a self‑contained, structured unit of information that exists in electronic form. It is more than just raw bits: it is a combination of **content**, **context**, and **identity** that allows computers and humans to store, interpret, preserve, and reuse information reliably.
 
 At its core, a digital object consists of three interdependent components:
@@ -8,16 +10,16 @@ At its core, a digital object consists of three interdependent components:
 
 - [**Metadata**](metadata.qmd) — the descriptive, structural, and technical information that explains how to interpret the files and how the object should be managed. Metadata identifies what the object is, how it is organized, who created it, when it was produced, and how it can be rendered or preserved. It provides the essential context that turns raw bits into understandable content.
 
-- [**Persistent Identifier (PID)**](pids.qmd) — a stable, globally unique reference (such as a DOI, Handle, or ARK) that ensures the object can be identified, found, cited, and linked over time, even if its storage location changes. The PID anchors the object’s identity in a durable way.
+- [**Persistent Identifier (PID)**](pids.qmd) — a stable, globally unique reference (such as a DOI, Handle, or ARK) that ensures the object can be identified, found, cited, and linked over time, even if its storage location changes. The persistent identifier anchors the object’s identity in a durable way.
 
 ```{dot}
 //| label: fig-1
 //| fig-cap: The Digital Object
 //| fig-align: center
-//| fig-width: 6
+//| fig-width: 3
 //| output: svg
 
-digraph digital_object {
+graph Triangle {
 
     graph [
         rankdir=TB,
@@ -26,7 +28,7 @@ digraph digital_object {
         fontsize=14,
         nodesep=0.8,
         ranksep=1.0
-    ];
+    ]
 
     node [
         shape=box,
@@ -37,7 +39,7 @@ digraph digital_object {
         fillcolor="#DAEAB4",
         penwidth=2,
         sketch=1
-    ];
+    ]
 
     edge [
         fontname="Helvetica",
@@ -45,20 +47,19 @@ digraph digital_object {
         color="#528641",
         fontcolor="#528641",
         penwidth=2
-    ];
-
-    // Main digital object
-    A [label="Digital Object"];
+    ]
 
     // Components
-    B [label="Files"];
-    C [label="Metadata"];
-    D [label="Persistent Identifier"];
+    B [label="File(s)"]
+    C [label="Metadata"]
+    D [label="Persistent Identifier"]
 
     // Relationships
-    A -> B;
-    A -> C;
-    A -> D;
+    B -- C
+    C -- D
+    D -- B
+
+    { rank=same; B; C; }
 }
 ```
 
@@ -72,11 +73,11 @@ These three parts form a single functional entity:
 
 If any one of these components is missing, the digital object becomes incomplete. Files without metadata are uninterpretable; metadata without files is empty description; and neither files nor metadata are useful if they cannot be reliably identified and located.
 
-The diagrams below illustrate two common patterns for connecting a PID, the underlying files, and their metadata.  
+The diagrams below illustrate two common patterns for connecting a persistent identifier, the underlying files, and their metadata.  
 
 ```{dot}
 //| label: fig-do-implementation
-//| fig-cap: Two common PID–File–Metadata relationship patterns.
+//| fig-cap: Two common Persistent Identifier – File – Metadata relationship patterns.
 //| fig-align: center
 //| fig-width: 8
 //| output: svg
@@ -125,10 +126,10 @@ digraph combined_relations {
 
         F1 [label="Files"];
         M1 [label="Metadata"];
-        P1 [label="Persistent Identifier (PID)"];
+        P1 [label="Persistent Identifier"];
 
         P1 -> F1 [label="points to"];
-        F1 -> M1 [label="points to"];
+        F1 -> M1 [label="contains"];
         M1 -> P1 [label="contains", constraint=false];
     }
 
@@ -144,7 +145,7 @@ digraph combined_relations {
 
         F2 [label="Files"];
         M2 [label="Metadata"];
-        P2 [label="Persistent Identifier (PID)"];
+        P2 [label="Persistent Identifier"];
 
         // Force horizontal alignment
         { rank = same; M2; P2 }
@@ -160,10 +161,11 @@ digraph combined_relations {
     }
 }
 ```
-In the first pattern, the PID resolves directly to a file, which then contains or links to the relevant metadata. 
+In the first pattern, the persistent identifier resolves directly to a file, which then contains or links to the relevant metadata. An example are images formats like JPEG and TIFF or sequencing file formats like FASTA or FASTQ.
 
-In the second pattern, the PID resolves to a metadata record or landing page, which provides the information needed to locate and access the file(s).  
-Both approaches are widely used; the choice depends on repository design and access requirements.
+In the second pattern, the persistent identifier resolves to a metadata record or landing page, which provides the information needed to locate and access the file(s).This approach is used by data publishing services.
+
+Both approaches are widely used; the choice depends on the use cases the data supports, the data repository design and access requirements.
 
 ### Why Digital Objects Matter
 
@@ -179,7 +181,7 @@ Digital objects are the foundation of modern research data management systems. T
   Clear metadata, stable identifiers, and standardized structures make digital objects easy to understand and integrate into new workflows.
 
 - **Reliable citation and tracking** — through persistent identifiers that remain valid even as files move or metadata changes.  
-  PIDs support accurate citation, versioning, provenance tracking, and automated linking.
+  Persistent identifiers support accurate citation, versioning, provenance tracking, and automated linking.
 
 - **Robust storage strategies** — enabling multiple replicas across diverse storage environments while maintaining a single, consistent identity.  
   Replicas of files on different storage systems improve resilience and performance without compromising citation or access.
@@ -191,9 +193,17 @@ Additional lifecycle functions include:
 - **Provenance** — documenting how data came to be, including transformations and dependencies.  
   This includes relationships such as *raw data → processed data → analysed data*, making the object’s history transparent and reproducible.
 
+## Data Lineage Across the Data States
+
+Digital objects form a natural progression as research unfolds. Each transformation produces a new object with its own files, metadata, and persistent identifier, while retaining a link to the object(s) it was derived from. The figure @fig-4 illustrates this chain: raw experimental data, a cleaned dataset derived from it, and an analysed dataset that becomes part of the archival or published record.
+
+This progression aligns with the data states without needing to restate the full model. The raw and processed objects sit in the Active and Closed states, where change is expected and provenance captures how one object leads to the next. The analysed object represents the point where the workflow stabilises: it moves into Locked and then Archived/Published, becoming a fixed, citable outcome.
+
+The lineage is documented in the metadata (derived_from: PID_A, derived_from: PID_B). This ensures that the digital objects remain connected even as they mature. Each object stands on its own, but together they form a traceable path from initial measurement to final result, a path that preservation systems can manage and that future users can understand.
+
 ```{dot}
 //| label: fig-4
-//| fig-cap: Data lineage represented as a chain of Digital Objects (raw → processed → analysed).
+//| fig-cap: Data lineage represented as a chain of Digital Objects linking from raw expreimental data to cleaned and processed data to the final analysed data.
 //| fig-align: center
 //| fig-width: 8
 //| output: svg
@@ -206,7 +216,8 @@ digraph data_lineage {
         fontname="Helvetica",
         fontsize=14,
         nodesep=1.0,
-        ranksep=1.4
+        ranksep=1.4,
+        compound=true
     ];
 
     node [
@@ -232,15 +243,22 @@ digraph data_lineage {
     // Raw Data Object
     // -------------------------------
     subgraph cluster_raw {
-        label="Raw Data Object";
+        label="Raw Data";
         fontsize=14;
         style="rounded";
         color="#528641";
         penwidth=2;
 
-        R_F [label="Files"];
-        R_M [label="Metadata"];
-        R_P [label="PID"];
+        R_F [label="experiment.csv"];
+        R_M [label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4">
+                <TR><TD><B>Metadata</B></TD></TR>
+                <TR><TD>Measuring instrument</TD></TR>
+                <TR><TD>Location</TD></TR>
+                <TR><TD>...</TD></TR>
+            </TABLE>
+        >];
+        R_P [label="identifier_A"];
 
         R_F -> R_M [style=invis];
         R_M -> R_P [style=invis];
@@ -250,15 +268,22 @@ digraph data_lineage {
     // Processed Data Object
     // -------------------------------
     subgraph cluster_proc {
-        label="Processed Data Object";
+        label="Processed Data";
         fontsize=14;
         style="rounded";
         color="#528641";
         penwidth=2;
 
-        P_F [label="Files"];
-        P_M [label="Metadata"];
-        P_P [label="PID"];
+        P_F [label="cleaned_experiment.csv"];
+        P_M [label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4">
+                <TR><TD><B>Metadata</B></TD></TR>
+                <TR><TD>Imputation algorithm</TD></TR>
+                <TR><TD>derived_from: identifier_A</TD></TR>
+                <TR><TD>...</TD></TR>
+            </TABLE>
+        >];
+        P_P [label="identifier_B"];
 
         P_F -> P_M [style=invis];
         P_M -> P_P [style=invis];
@@ -268,15 +293,22 @@ digraph data_lineage {
     // Analysed Data Object
     // -------------------------------
     subgraph cluster_analysis {
-        label="Analysed Data Object";
+        label="Analysed Data";
         fontsize=14;
         style="rounded";
         color="#528641";
         penwidth=2;
 
-        A_F [label="Files"];
-        A_M [label="Metadata"];
-        A_P [label="PID"];
+        A_F [label="figure_data.csv"];
+        A_M [label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4">
+                <TR><TD><B>Metadata</B></TD></TR>
+                <TR><TD>Regression algorithm</TD></TR>
+                <TR><TD>derived_from: identifier_B</TD></TR>
+                <TR><TD>...</TD></TR>
+            </TABLE>
+        >];
+        A_P [label="identifier_C"];
 
         A_F -> A_M [style=invis];
         A_M -> A_P [style=invis];
@@ -285,22 +317,23 @@ digraph data_lineage {
     // -------------------------------
     // Lineage edges
     // -------------------------------
-    P_M -> R_P [label="created from"];
-    A_M -> P_P [label="created from"];
+    P_M -> R_P[lhead=cluster_raw];
+    A_M -> P_P[lhead=cluster_proc];
 }
-
 ```
 
-### In essence
+### Summary
 
 A digital object is content + context + identity.  
 The bitstreams supply the content, the metadata provides the meaning needed to interpret and manage that content, and the persistent identifier anchors a stable, durable identity.
 Together, these components make digital information portable across systems, understandable over time, and resilient to changes in storage or technology.
 The chapters that follow examine each of these elements in depth, along with the infrastructure that enables them to function as a coherent whole.
 
+In the following chapters we will dive into the single components which constitute a digital object.
+
 ## References
 
-- https://www.lisedunetwork.com/what-is-a-digital-object/?utm_source=copilot.com
-- https://wiki.dpconline.org/index.php?title=4.2.1.3.1_Representation_Information_Types&utm_source=copilot.com
-- https://archive.rd-alliance.org/sites/default/files/2-kahn-do-talk.pdf?utm_source=copilot.com
+- https://www.lisedunetwork.com/what-is-a-digital-object
+- https://wiki.dpconline.org/index.php?title=4.2.1.3.1_Representation_Information_Types
+- https://archive.rd-alliance.org/sites/default/files/2-kahn-do-talk.pdf
 - DOI 10.1007/s00799-005-0128-x
