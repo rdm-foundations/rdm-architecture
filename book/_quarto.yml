@@ -46,7 +46,7 @@ book:
         - digital-object-infrastructure.qmd
         - data-repositories.qmd
         - policy-engines.qmd
-        - metadata-portals.qmd
+        - metadata-infrastructure.qmd
         - pid-services.qmd
     - rdm-platform.qmd
     - do-continuity.qmd
