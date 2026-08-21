@@ -50,7 +50,6 @@ book:
         - pid-services.qmd
     - rdm-platform.qmd
     - do-continuity.qmd
-    - summary.qmd
     - references.qmd
   
   page-footer:

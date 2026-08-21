@@ -617,11 +617,21 @@ Every component in an RDM platform should make its interfaces explicit:
 A service that answers these questions clearly can be integrated into a FAIR‑aligned ecosystem.  
 A service that cannot risks breaking the digital‑object layer.
 
-### In short
+## Designing for Continuity
+
+The continuity of digital objects across an RDM ecosystem depends on a few core architectural principles:
 
 - **Design is important**: digital objects must remain coherent across transitions.  
 - **Think transitions before building a new silo**: tools must integrate into the lifecycle, not sit beside it.  
 - **Discipline‑specific platforms are valuable**: but only if they expose standards that allow them to interoperate with services from other domains.  
 - **Interfaces matter**: every service must make clear how it participates in the lifecycle of a digital object.
 
-This sets the stage for the next chapter, where we look at metadata portals and aggregation services, and how they depend on well‑designed transitions to provide global discovery.
+Together, these principles define what it means to build a FAIR‑aligned infrastructure: one where identity, metadata, and provenance remain intact as digital objects move from creation to publication and beyond.
+
+Research data management is often described in terms of tools, repositories, formats, and policies. But beneath these operational details lies a deeper architectural challenge: ensuring that digital objects remain identifiable, contextualised, and traceable as they move through increasingly complex ecosystems. This book has traced how digital objects emerge from active files, gain identity and metadata, move through repositories and orchestration, and ultimately rely on continuity to remain whole across the RDM ecosystem.
+
+The future of RDM will not be defined by more systems, but by better‑designed transitions; by infrastructures that treat digital objects as first‑class, governed entities rather than incidental outputs of local workflows. As research becomes more distributed, automated, and interdisciplinary, this continuity becomes the foundation on which FAIRness, reproducibility, and long‑term stewardship depend.
+
+The work of building such infrastructures is ongoing, collaborative, and never finished. But with clear architectural principles and a shared understanding of digital‑objects and their continuity, the research community is well‑positioned to design platforms that support science not only today, but for decades to come.
+
+This is the foundation on which modern research infrastructures will be built.
