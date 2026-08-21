@@ -51,6 +51,7 @@ book:
     - rdm-platform.qmd
     - do-continuity.qmd
     - summary.qmd
+    - glossary.qmd
     - references.qmd
   
   page-footer:
@@ -76,4 +77,7 @@ format:
       utterances: 
         repo: rdm-foundations/rdm-architecture
 
-
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true

@@ -41,7 +41,7 @@ The FAIR Principles — _Findable, Accessible, Interoperable, Reusable_ — prov
 
 ## Connecting FAIR and the RDM Life Cycle
 
-The RDM life cycle describes how data evolves, while the FAIR principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.
+The {{< glossary "RDM Life Cycle" >}} describes how data evolves, while the {{< glossary "FAIR" >}} principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.
 
 A key insight is that FAIR does not “switch on” only at publication. Its scope shifts as data matures. Initially, FAIR supports collaboration and internal organisation. Later, it supports stewardship, preservation, and ultimately global reuse.
 
@@ -299,7 +299,7 @@ In the Active state, rapid iteration and collaboration dominate. Files change fr
 
 FAIR here is practical and inward‑facing: clear naming, shared access points, open formats, and well‑maintained notebooks that support reproducible teamwork.
 
-- **Typical services**: HPC scratch, project storage, ELNs, version control.
+- **Typical services**: {{< glossary Scratch display="HPC scratch"  >}}, project storage, {{< glossary ELN display="Elab Journals"  >}}, version control.
 
 - **Audience**: research team
 
@@ -311,7 +311,7 @@ During the Closed stage, data becomes sufficiently stable for structured organis
 
 The Locked state then acts as a buffer. Stabilised data is frozen in a read‑only condition, protected against accidental changes while retention and appraisal take place. FAIR remains minimal but essential, ensuring the data stays intelligible and manageable even in inactivity.
 
-- **Typical services**: tape libraries, cold storage, retention systems, workflow engines, metadata templates.
+- **Typical services**: {{< glossary "Tape Library" >}}, {{< glossary "Cold Storage" >}}, {{< glossary Retention display="Retention Systems"  >}}, {{< glossary "Workflow Engines" >}}, Metadata Templates.
 
 - **Audience**: research team + institutional stewards
 
@@ -371,6 +371,8 @@ With the life cycle, FAIR, and data states now integrated, the digital object em
 
 The next chapter, [The Digital Object](digital-object.qmd), explores this concept in depth: what digital objects are, how they are constructed, and why they function as the core entities that research data infrastructures must support.
 
+
 ## References
 
 - https://www.nature.com/articles/sdata201618
+

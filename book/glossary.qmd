@@ -1,0 +1,33 @@
+# Glossary
+
+::: {.hidden}
+{{< glossary Citation add_to_table=true >}}
+{{< glossary "Cold Storage" add_to_table=true >}}
+{{< glossary "Data Governance" add_to_table=true >}}
+{{< glossary "Data Integrity" add_to_table=true >}}
+{{< glossary "Data Lineage" add_to_table=true >}}
+{{< glossary "Data Stewardship" add_to_table=true >}}
+{{< glossary "Digital Object" add_to_table=true >}}
+{{< glossary ELN add_to_table=true >}}
+{{< glossary FAIR add_to_table=true >}}
+{{< glossary Files add_to_table=true >}}
+{{< glossary Fixity add_to_table=true >}}
+{{< glossary Interoperability add_to_table=true >}}
+{{< glossary Metadata add_to_table=true >}}
+{{< glossary PID add_to_table=true >}}
+{{< glossary Preservation add_to_table=true >}}
+{{< glossary Provenance add_to_table=true >}}
+{{< glossary RDM add_to_table=true >}}
+{{< glossary "RDM Life Cycle" add_to_table=true >}}
+{{< glossary Reusability add_to_table=true >}}
+{{< glossary Replica add_to_table=true >}}
+{{< glossary Retention add_to_table=true >}}
+{{< glossary Scratch add_to_table=true >}}
+{{< glossary "Tape Library" add_to_table=true >}}
+{{< glossary Versioning add_to_table=true >}}
+{{< glossary "Workflow Engines" add_to_table=true >}}
+
+:::
+
+{{< glossary table=true >}}
+
