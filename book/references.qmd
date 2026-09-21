@@ -1,4 +1,54 @@
 # References {.unnumbered}
 
+<!-- Hidden citations to force inclusion of all bibliography entries -->
+::: {style="display:none"}
+@wiki_data_governance
+@simplilearn_data_stewardship
+@wiki_data_steward
+@doi_data_governance_2008
+@gofair_principles
+@wilkinson_fair_lifecycle_2016
+@wiki_open_science
+@turingway_open_science
+@wiki_big_data
+@wiki_data_integrity
+@turingway_definitions
+@wiki_reproducibility
+@wiki_data_wrangling
+@lisedu_digital_object
+@dpconline_representation_info
+@kahn_digital_object_talk
+@doi_digital_object_2005
+@w3c_linkeddata
+@bernerslee_linkeddata
+@rda_tdwg_attribution
+@ddi_alliance
+@isa_specification
+@tib_pid_service
+@surf_pid_structure
+@rda_pid_report
+@weigel_pid_kernel_2018
+@turingway_repositories
+@ccsds_oais_2012
+@gofair_pid
+@doi_org
+@pidconsortium
+@handle_system
+@dona_foundation
+@arks_org
+@rfc3650_handle_overview
+@rfc3651_handle_res
+@cnri_distributed_objects
+@schwardmann_fdo_services_2020
+@theocharides_cooking_dois_2025
+@islam_fair_digital_twins_2025
+@fairdo_org
+@gofair_framework
+@dona_doipv2
+@blumenroehr_fdo_dataspaces_2024
+@seek_2025
+:::
+
+
 ::: {#refs}
 :::

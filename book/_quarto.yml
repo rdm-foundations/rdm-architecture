@@ -58,6 +58,7 @@ book:
     right: "Built with [Quarto](https://quarto.org/) & [GitHub](https://github.com/)<br>Maintained with 🍵 & ☕"  
 
 bibliography: references.bib
+csl: nature.csl
 
 format:
   html:
