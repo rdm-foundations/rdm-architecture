@@ -1,6 +1,6 @@
 # Definitions
 
-Understanding research data requires a shared vocabulary. Before we can describe how data evolves, how it becomes a digital object, or how FAIR principles apply at different stages, we need clear definitions of the core concepts that shape modern research data management. These terms, Research Data Management, stewardship, governance, FAIR, reproducibility, form the conceptual scaffolding for everything that follows in this book.
+Understanding research data management requires a shared vocabulary. Before we can describe how data evolves, how it becomes a digital object, or how FAIR principles apply at different stages, we need clear definitions of the core concepts that shape modern research data management. These terms, Research Data Management, stewardship, governance, FAIR, reproducibility, form the conceptual scaffolding for everything that follows in this book.
 
 The definitions below provide the foundation for that discussion. They establish the key ideas that will be expanded, operationalised, and connected to infrastructure design in the chapters ahead.
 
