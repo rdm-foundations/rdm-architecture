@@ -243,11 +243,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Summary</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -262,7 +257,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-fair-means-for-infrastructure" id="toc-what-fair-means-for-infrastructure" class="nav-link active" data-scroll-target="#what-fair-means-for-infrastructure">What FAIR Means for Infrastructure</a>
+  <li><a href="#from-fair-principles-to-fair-infrastructure" id="toc-from-fair-principles-to-fair-infrastructure" class="nav-link active" data-scroll-target="#from-fair-principles-to-fair-infrastructure">From FAIR Principles to FAIR Infrastructure</a></li>
+  <li><a href="#what-fair-means-for-infrastructure" id="toc-what-fair-means-for-infrastructure" class="nav-link" data-scroll-target="#what-fair-means-for-infrastructure">What FAIR Means for Infrastructure</a>
   <ul class="collapse">
   <li><a href="#findable-f1f4" id="toc-findable-f1f4" class="nav-link" data-scroll-target="#findable-f1f4">Findable (F1–F4)</a></li>
   <li><a href="#accessible-a1a2" id="toc-accessible-a1a2" class="nav-link" data-scroll-target="#accessible-a1a2">Accessible (A1–A2)</a></li>
@@ -303,6 +299,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><em>From Components to a FAIR‑Aligned Infrastructure</em></p>
+<p>Modern research data does not become FAIR simply by being stored, described, or published. FAIRness emerges only when the underlying infrastructure behaves predictably as data moves through it. A modern RDM platform must therefore coordinate storage, policy engines, repositories, PID services, metadata systems, and compute environments so that digital objects retain their identity, metadata, and provenance across the entire lifecycle.</p>
+<section id="from-fair-principles-to-fair-infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="from-fair-principles-to-fair-infrastructure">From FAIR Principles to FAIR Infrastructure</h2>
 <p>Modern Research Data Management (RDM) is built from many specialised components: repositories, policy engines, metadata services, PID services, and storage systems. Each plays a distinct role, but none of them delivers FAIR on its own. FAIR only emerges when these components are assembled into a coherent platform with shared standards, predictable data flows, and consistent governance.</p>
 <ul>
 <li><strong>Storage infrastructure</strong> preserves the bitstreams.<br>
@@ -318,6 +317,7 @@ ul.task-list li input[type="checkbox"] {
 <p>When these systems interoperate through stable APIs, shared schemas, and coordinated policies, they stop being isolated tools and become a platform: an environment where data can move, evolve, and be reused without losing identity, metadata, or provenance.</p>
 <p>This is the shift from <em>components</em> to <em>infrastructure design</em>.<br>
 Designing a modern RDM platform means taking the FAIR principles seriously—not as guidelines for researchers, but as requirements on the infrastructure itself. A FAIR‑aligned platform is therefore not a single system but a coordinated ecosystem that makes data Findable, Accessible, Interoperable, and Reusable by design.</p>
+</section>
 <section id="what-fair-means-for-infrastructure" class="level2">
 <h2 class="anchored" data-anchor-id="what-fair-means-for-infrastructure">What FAIR Means for Infrastructure</h2>
 <p>FAIR is often interpreted as a metadata‑centric framework, but for infrastructure, FAIR applies equally to files, formats, and the protocols and workflows that produce them. A digital object is not only metadata + PID; it is also:</p>
@@ -432,6 +432,7 @@ Infrastructure must ensure that:</p>
 </section>
 <section id="integration-and-policy-the-glue-that-makes-fair-work" class="level2">
 <h2 class="anchored" data-anchor-id="integration-and-policy-the-glue-that-makes-fair-work">Integration and Policy: The Glue That Makes FAIR Work</h2>
+<p>With FAIR requirements defined, the next question is how infrastructure components must work together to uphold them across the lifecycle.</p>
 <p>A FAIR data platform is only FAIR if its components work together. This requires well‑defined integrations and an orchestration layer that governs how data and metadata move across the lifecycle. Storage, metadata services, policy engines, and repositories must interoperate through stable interfaces and shared standards so that data remains coherent as it transitions between systems.</p>
 <blockquote class="blockquote">
 <p><strong>APIs alone are not enough.</strong></p>
@@ -532,6 +533,7 @@ Once identity is established, it must persist across all transitions.</p>
 <li>provenance is captured automatically</li>
 </ul>
 <p>This requires shared metadata models, identifier schemes, and exchange formats across all components.</p>
+<p>These transitions are where infrastructure either preserves or loses FAIRness. The orchestration layer exists to make these transitions predictable, governed, and lossless.</p>
 </section>
 <section id="why-transitions-and-orchestration-belong-together" class="level3">
 <h3 class="anchored" data-anchor-id="why-transitions-and-orchestration-belong-together">Why transitions and orchestration belong together</h3>
