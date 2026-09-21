@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./metadata-portals.html" rel="next">
+<link href="./metadata-infrastructure.html" rel="next">
 <link href="./data-repositories.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6dc2c6ce8841d2c96625bdf5dfd1d3f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./metadata-portals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Metadata Infrastructure</span></a>
+  <a href="./metadata-infrastructure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Metadata Infrastructure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -578,15 +578,15 @@ It decides where data goes, how it is replicated, how it is described, and how i
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 403.2)">
 <title>replication_flow</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-403.2 842,-403.2 842,4 -4,4"></polygon>
-<g id="clust1" class="cluster">
-<title>cluster_policy_engine</title>
-<path fill="white" stroke="#528641" stroke-width="2" d="M20,-8C20,-8 244,-8 244,-8 250,-8 256,-14 256,-20 256,-20 256,-251.6 256,-251.6 256,-257.6 250,-263.6 244,-263.6 244,-263.6 20,-263.6 20,-263.6 14,-263.6 8,-257.6 8,-251.6 8,-251.6 8,-20 8,-20 8,-14 14,-8 20,-8"></path>
-<text text-anchor="middle" x="132" y="-17.4" font-family="Helvetica,sans-Serif" font-size="18.00">Policy Engine</text>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_storage</title>
 <path fill="white" stroke="#528641" stroke-width="2" d="M304,-15.6C304,-15.6 818,-15.6 818,-15.6 824,-15.6 830,-21.6 830,-27.6 830,-27.6 830,-85.2 830,-85.2 830,-91.2 824,-97.2 818,-97.2 818,-97.2 304,-97.2 304,-97.2 298,-97.2 292,-91.2 292,-85.2 292,-85.2 292,-27.6 292,-27.6 292,-21.6 298,-15.6 304,-15.6"></path>
 <text text-anchor="middle" x="561" y="-25" font-family="Helvetica,sans-Serif" font-size="18.00">Storage Systems</text>
+</g>
+<g id="clust1" class="cluster">
+<title>cluster_policy_engine</title>
+<path fill="white" stroke="#528641" stroke-width="2" d="M20,-8C20,-8 244,-8 244,-8 250,-8 256,-14 256,-20 256,-20 256,-251.6 256,-251.6 256,-257.6 250,-263.6 244,-263.6 244,-263.6 20,-263.6 20,-263.6 14,-263.6 8,-257.6 8,-251.6 8,-251.6 8,-20 8,-20 8,-14 14,-8 20,-8"></path>
+<text text-anchor="middle" x="132" y="-17.4" font-family="Helvetica,sans-Serif" font-size="18.00">Policy Engine</text>
 </g>
 <!-- User -->
 <g id="node1" class="node">
@@ -767,15 +767,15 @@ Figure&nbsp;13.3: The policy engine monitors file metadata. When a data‑aging 
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 324)">
 <title>ingest_flow</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-324 767.31,-324 767.31,4 -4,4"></polygon>
-<g id="clust1" class="cluster">
-<title>cluster_storage</title>
-<path fill="white" stroke="#528641" stroke-width="2" d="M584.22,-115C584.22,-115 743.31,-115 743.31,-115 749.31,-115 755.31,-121 755.31,-127 755.31,-127 755.31,-293 755.31,-293 755.31,-299 749.31,-305 743.31,-305 743.31,-305 584.22,-305 584.22,-305 578.22,-305 572.22,-299 572.22,-293 572.22,-293 572.22,-127 572.22,-127 572.22,-121 578.22,-115 584.22,-115"></path>
-<text text-anchor="middle" x="663.76" y="-284.8" font-family="Helvetica,sans-Serif" font-size="18.00">Storage Systems</text>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_policy_engine</title>
 <path fill="white" stroke="#528641" stroke-width="2" d="M209.08,-8C209.08,-8 469.18,-8 469.18,-8 475.18,-8 481.18,-14 481.18,-20 481.18,-20 481.18,-300 481.18,-300 481.18,-306 475.18,-312 469.18,-312 469.18,-312 209.08,-312 209.08,-312 203.08,-312 197.08,-306 197.08,-300 197.08,-300 197.08,-20 197.08,-20 197.08,-14 203.08,-8 209.08,-8"></path>
 <text text-anchor="middle" x="339.13" y="-291.8" font-family="Helvetica,sans-Serif" font-size="18.00">Policy Engine</text>
+</g>
+<g id="clust1" class="cluster">
+<title>cluster_storage</title>
+<path fill="white" stroke="#528641" stroke-width="2" d="M584.22,-115C584.22,-115 743.31,-115 743.31,-115 749.31,-115 755.31,-121 755.31,-127 755.31,-127 755.31,-293 755.31,-293 755.31,-299 749.31,-305 743.31,-305 743.31,-305 584.22,-305 584.22,-305 578.22,-305 572.22,-299 572.22,-293 572.22,-293 572.22,-127 572.22,-127 572.22,-121 578.22,-115 584.22,-115"></path>
+<text text-anchor="middle" x="663.76" y="-284.8" font-family="Helvetica,sans-Serif" font-size="18.00">Storage Systems</text>
 </g>
 <!-- Cold -->
 <g id="node1" class="node">
@@ -891,6 +891,11 @@ Figure&nbsp;13.4: When a user uploads a file, the policy engine applies an inges
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 672.8)">
 <title>workflow_generated_data</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-672.8 1247,-672.8 1247,4 -4,4"></polygon>
+<g id="clust3" class="cluster">
+<title>cluster_storage</title>
+<path fill="white" stroke="#528641" stroke-width="2" d="M842,-215.6C842,-215.6 1223,-215.6 1223,-215.6 1229,-215.6 1235,-221.6 1235,-227.6 1235,-227.6 1235,-285.2 1235,-285.2 1235,-291.2 1229,-297.2 1223,-297.2 1223,-297.2 842,-297.2 842,-297.2 836,-297.2 830,-291.2 830,-285.2 830,-285.2 830,-227.6 830,-227.6 830,-221.6 836,-215.6 842,-215.6"></path>
+<text text-anchor="middle" x="1032.5" y="-277" font-family="Helvetica,sans-Serif" font-size="18.00">Storage Systems</text>
+</g>
 <g id="clust1" class="cluster">
 <title>cluster_compute</title>
 <path fill="white" stroke="#528641" stroke-width="2" d="M429,-564C429,-564 743,-564 743,-564 749,-564 755,-570 755,-576 755,-576 755,-648.8 755,-648.8 755,-654.8 749,-660.8 743,-660.8 743,-660.8 429,-660.8 429,-660.8 423,-660.8 417,-654.8 417,-648.8 417,-648.8 417,-576 417,-576 417,-570 423,-564 429,-564"></path>
@@ -900,11 +905,6 @@ Figure&nbsp;13.4: When a user uploads a file, the policy engine applies an inges
 <title>cluster_policy_engine</title>
 <path fill="white" stroke="#528641" stroke-width="2" d="M20,-8C20,-8 776,-8 776,-8 782,-8 788,-14 788,-20 788,-20 788,-487.4 788,-487.4 788,-493.4 782,-499.4 776,-499.4 776,-499.4 20,-499.4 20,-499.4 14,-499.4 8,-493.4 8,-487.4 8,-487.4 8,-20 8,-20 8,-14 14,-8 20,-8"></path>
 <text text-anchor="middle" x="398" y="-479.2" font-family="Helvetica,sans-Serif" font-size="18.00">Policy Engine</text>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_storage</title>
-<path fill="white" stroke="#528641" stroke-width="2" d="M842,-215.6C842,-215.6 1223,-215.6 1223,-215.6 1229,-215.6 1235,-221.6 1235,-227.6 1235,-227.6 1235,-285.2 1235,-285.2 1235,-291.2 1229,-297.2 1223,-297.2 1223,-297.2 842,-297.2 842,-297.2 836,-297.2 830,-291.2 830,-285.2 830,-285.2 830,-227.6 830,-227.6 830,-221.6 836,-215.6 842,-215.6"></path>
-<text text-anchor="middle" x="1032.5" y="-277" font-family="Helvetica,sans-Serif" font-size="18.00">Storage Systems</text>
 </g>
 <!-- WF -->
 <g id="node1" class="node">
@@ -1617,7 +1617,7 @@ Policy engines solve <strong>digital‑object lifecycle</strong> problems.</p>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./metadata-portals.html" class="pagination-link" aria-label="Metadata Infrastructure">
+      <a href="./metadata-infrastructure.html" class="pagination-link" aria-label="Metadata Infrastructure">
         <span class="nav-page-text"><span class="chapter-title">Metadata Infrastructure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
