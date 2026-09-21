@@ -33,8 +33,8 @@ This is why FAIR emphasises that metadata must be findable and accessible, not m
 
 To achieve this, repositories must expose metadata through standard protocols (e.g., OAI‑PMH, ResourceSync, REST APIs) so that external services can collect and index it.
 
-The limitations above reveal a simple truth: metadata must move.
-@fig-metadata-flow shows the architecture to make metadata actionable for researchers and machines. The nodes in light green denote the components that directly interact with users and machines and which you might have already used.
+Taken together, these limitations show that metadata cannot remain static. It must move through the infrastructure so that each stage of the research lifecycle can contribute to its completeness and findability. Moreover, systems, data users, compute pipelines, and automated agents need to be able actually employ the metadata rather than merely generate and store it.
+@fig-metadata-flow shows the high-level architecture to make metadata actionable for researchers and machines. The nodes in light green denote the components that directly interact with users and machines and which you might have already used.
 
 ```{dot}
 //| label: fig-metadata-flow
