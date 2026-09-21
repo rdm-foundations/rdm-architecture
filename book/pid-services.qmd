@@ -636,8 +636,15 @@ search_client = PyHandleClient("rest").instantiate_for_read_and_search(
 result = search_client.search_handle(URL="/myfile/here/local.txt")
 print(result)
 ```
+## From Components to Coordinated Infrastructure
 
+Across the previous chapters we followed the full evolution of research data: from volatile active files, to stable digital objects shaped by policy engines and repositories, to the metadata and PID infrastructures that make those objects discoverable, citable, and connected across systems.
 
+By assembling storage, repositories, policy engines, PID services, metadata infrastructure, and compute into a coherent platform, we move from isolated tools to a FAIR‑aligned ecosystem. But a platform is only the beginning. Once the components interoperate, the question becomes how to operate this ecosystem predictably — how to coordinate workflows, enforce policies, preserve identity, and ensure that digital objects remain whole as they move.
+
+FAIR for infrastructure means ensuring the continuity of digital objects as they move from service to service preserving their identity, metadata, and provenance across every transition in the platform.
+
+The next chapter turns to this operational layer, examining how modern infrastructures orchestrate data, metadata, identifiers, and provenance across the entire lifecycle so that FAIRness is preserved end‑to‑end.
 
 ## References
 - https://www.go-fair.org/fair-principles/

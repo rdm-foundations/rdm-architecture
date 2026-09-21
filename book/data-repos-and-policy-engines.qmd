@@ -1,12 +1,17 @@
 # Data Repositories and Policy Engines
 
-In the previous chapter, we saw that modern RDM depends on a coordinated infrastructure in which storage, metadata, identifiers and compute systems each play a distinct role in creating and supporting digital objects across their lifecycle. Storage keeps files safe, but it does not coordinate:
+The previous chapter outlined the layers of RDM infrastructure and showed how storage, metadata, identifiers, and compute each contribute to forming and using digital objects.
+We now turn to the first systems that operate above storage — the systems responsible for coordinating files, metadata, identifiers, and policies as digital objects emerge and stabilise.
+These systems fall into two complementary categories: data repositories and policy engines.
 
-- the **files** themselves  
-- their **replicas** across different storage systems  
-- their **metadata**  
-- their **persistent identifiers**
-- their **relationships**, provenance, or lifecycle state
+Storage keeps files safe, but it does not coordinate:
+
+- the *files* themselves  
+- their *replicas* across different storage systems  
+- their *metadata*  
+- their *persistent identifiers*
+- their *relationships* and provenance
+- their *lifecycle state*
 
 This coordination is needed throughout the entire data lifecycle, especially in the early, volatile stages where files are created, transformed, and stabilised. Yet these stages often lack infrastructure capable of treating files as emerging digital objects.
 
@@ -32,8 +37,10 @@ This distinction is central to understanding why repositories and policy engines
 
 :::
 
+The next chapters examine how data repositories and policy engines manage and govern digital objects once they begin to take shape.
+
 ## References
 
-- https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository/
+- <https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository/>
 
 

@@ -9,11 +9,12 @@ In principle, repository *software* can support archiving without full publicati
 
 Even in these cases, the repository entry (landing page) and its basic metadata are usually publicly visible, while the underlying files may be delayed or restricted.
 
-Repositories operate primarily at the dataset level. They expect researchers to prepare a coherent data package consisting of:
+Repositories operate primarily at the dataset level, meaning the digital object here consists of several files. They expect researchers to prepare a coherent data package consisting of:
 
 - one metadata record  
 - one persistent identifier  
 - one landing page  
+- the files
 
 File‑level metadata may be supported, but it is typically secondary. Repositories are therefore optimised for curation, governance, and long‑term retention of stabilised datasets, not for managing the volatile, rapidly changing files produced during active research.
 
@@ -31,7 +32,7 @@ In short, repositories excel at turning stabilised files into citable, discovera
 ### The Repository Workflow
 
 ```{dot}
-//| label: fig-1
+//| label: fig-repo-workflow
 //| fig-cap: Data repositories implement a structured publication workflow that transforms a bundle of stabilised files into a single governed digital object. The workflow focuses on dataset‑level metadata, packaging, and persistent identifiers rather than elevating individual files to independent objects.
 //| fig-align: center
 //| output: svg
@@ -86,7 +87,9 @@ digraph data_repo_workflow {
 }
 ```
 
-This workflow is implemented differently across repository platforms, but the underlying logic is the same: stabilised files are transformed into a governed dataset with metadata, identifiers, and access controls. The following platforms illustrate how these principles appear in real systems.
+Figure @fig-repo-workflow shows a standard repository workflow from draft phase to final publication.
+
+This workflow is implemented slightly differently across repository platforms, but the underlying logic is the same: stabilised files are transformed into a governed dataset with metadata, an identifier, and access controls. The following platforms illustrate how these principles appear in real systems.
 
 ## Repository Platforms
 
@@ -123,9 +126,9 @@ Figshare focuses on ease of deposit and broad dissemination. It supports many ou
 - embargoes and controlled access  
 - ORCID integration  
 
-Figshare focusses on sharing of research output and [provides integrations](https://info.figshare.com/user-guide/list-of-figshare-integrations/) and offers [OAI-PMH](https://info.figshare.com/user-guide/how-to-use-figshares-oai-pmh-service/).
+Figshare focusses on sharing of research output, [provides integrations](https://info.figshare.com/user-guide/list-of-figshare-integrations/) and offers tools to expose metadata to metadata portals through [OAI-PMH](https://info.figshare.com/user-guide/how-to-use-figshares-oai-pmh-service/).
 
-Figshare is ideal when the goal is to make research outputs easy to publish and easy to find.
+The software and service is ideal when the goal is to make research outputs easy to publish and easy to find.
 
 ### Invenio / Zenodo
 
@@ -148,7 +151,7 @@ Zenodo supports:
 - any file type  
 - automatic DOI assignment  
 - concept DOIs and version DOIs  
-- GitHub integration (archiving releases automatically)  
+- GitHub integration (archiving software releases automatically)  
 - long‑term preservation  
 
 Zenodo is widely used for software, code releases, and small to medium‑sized datasets.
@@ -177,7 +180,7 @@ A BagIt “bag” contains:
 - optional **tag files** with descriptive or administrative metadata  
 
 A minimal BagIt directory might look like this:
-```
+```sh
 mydataset-bag/
 ├── bagit.txt
 ├── bag-info.txt
@@ -189,21 +192,21 @@ mydataset-bag/
 ```
 - bagit.txt declares the BagIt version and encoding:
 	
-	```
+	```sh
 	BagIt-Version: 1.0
 	Tag-File-Character-Encoding: UTF-8
 	```
 	
 - bag-info.txt conatins high-level metadata about the "bag"
 	
-	```
+	```sh
 	Bag-Software-Agent: Example BagIt Creator 1.0
 	Bagging-Date: 2024-05-01
 	Contact-Name: Research Data Team
 	``` 
 - manifest-sha256.txt contains the checksums for all files in `/data`:
  
- 	```
+ 	```sh
  	3a7bd3e2360a3d...  data/results.csv
 	b1946ac92492d...  data/readme.txt
  	```
@@ -357,7 +360,7 @@ An RO‑Crate consists of:
 
 Below we illustrate an example:
 
-```
+```sh
 my-crate/
 ├── ro-crate-metadata.json
 ├── ro-crate-preview.html
@@ -367,9 +370,14 @@ my-crate/
 └── workflow.cwl
 ```
 
-The file `ro-crate-metadata.json` is a JSON-LD file, a file which uses linked data to describe the relationship between the files in the package:
+The file `ro-crate-metadata.json` is a JSON-LD file, a file which uses linked data to describe the relationship between the files in the package.
 
-```{xml}
+::: {.callout-tip collapse="true"}
+
+### Inspect the JSON-LD RO-Crate file
+
+
+```xml
 {
   "@context": "https://w3id.org/ro/crate/1.1/context",
   "@graph": [
@@ -420,6 +428,7 @@ The file `ro-crate-metadata.json` is a JSON-LD file, a file which uses linked da
   ]
 }
 ```
+:::
 
 RO‑Crate is designed for:
 
@@ -451,3 +460,5 @@ Repositories may use one or several of these standards depending on their role:
 - **Workflow‑oriented systems** increasingly adopt RO‑Crate for computational provenance.
 
 Together, these standards form the technical backbone that allows repositories to preserve digital objects reliably and integrate with institutional or national preservation infrastructures.
+
+Repositories govern data once it has stabilised, but most research data is created and transformed long before that point. To understand how digital objects are managed during this active phase, we now turn to policy engines, the systems that coordinate files, metadata, and storage while data is still evolving.
