@@ -1,6 +1,10 @@
 # RDM Platform 
 *From Components to a FAIR‑Aligned Infrastructure*
 
+Modern research data does not become FAIR simply by being stored, described, or published. FAIRness emerges only when the underlying infrastructure behaves predictably as data moves through it. A modern RDM platform must therefore coordinate storage, policy engines, repositories, PID services, metadata systems, and compute environments so that digital objects retain their identity, metadata, and provenance across the entire lifecycle.
+
+## From FAIR Principles to FAIR Infrastructure
+
 Modern Research Data Management (RDM) is built from many specialised components: repositories, policy engines, metadata services, PID services, and storage systems. Each plays a distinct role, but none of them delivers FAIR on its own. FAIR only emerges when these components are assembled into a coherent platform with shared standards, predictable data flows, and consistent governance.
 
 - **Storage infrastructure** preserves the bitstreams.  
@@ -114,6 +118,8 @@ Infrastructure must therefore support schema versioning, provenance capture, wor
 
 ## Integration and Policy: The Glue That Makes FAIR Work
 
+With FAIR requirements defined, the next question is how infrastructure components must work together to uphold them across the lifecycle.
+
 A FAIR data platform is only FAIR if its components work together. This requires well‑defined integrations and an orchestration layer that governs how data and metadata move across the lifecycle. Storage, metadata services, policy engines, and repositories must interoperate through stable interfaces and shared standards so that data remains coherent as it transitions between systems.
 
 > **APIs alone are not enough.**  
@@ -195,6 +201,7 @@ A FAIR‑aligned platform must therefore ensure that:
 
 This requires shared metadata models, identifier schemes, and exchange formats across all components.
 
+These transitions are where infrastructure either preserves or loses FAIRness. The orchestration layer exists to make these transitions predictable, governed, and lossless.
 
 ### Why transitions and orchestration belong together
 
