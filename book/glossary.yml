@@ -1,0 +1,131 @@
+RDM:
+  def: |
+    Coordinated activities that support the creation, organisation, documentation,
+    storage, preservation, and sharing of research data across its operational
+    states (Active, Closed, Locked, Archived, Published).
+
+Data Governance:
+  def: |
+    The organisational framework of policies, roles, and standards that ensures
+    data is managed consistently, securely, and ethically throughout its lifecycle.
+
+Data Stewardship:
+  def: |
+    The ongoing care and oversight of research data to ensure its quality,
+    accessibility, and long‑term value across transitions between data states.
+
+RDM Life Cycle:
+  def: |
+    The progression of data from working files to curated outputs, represented as
+    Process, Analyse, Archived, and Published, aligned with the five operational
+    data states.
+
+FAIR:
+  def: |
+    Principles that make data Findable, Accessible, Interoperable, and Reusable,
+    applied differently across lifecycle stages as data matures and stabilises.
+
+Data Integrity:
+  def: |
+    The accuracy, completeness, and consistency of data across its lifecycle,
+    supported by provenance, versioning, fixity checks, and controlled transitions.
+
+Digital Object:
+  def: |
+    A structured unit of digital information composed of content, metadata, and a
+    persistent identifier, enabling reliable storage, interpretation, preservation,
+    and reuse.
+
+Files:
+  def: |
+    The digital content of a digital object, stored as one or more files such as
+    documents, images, datasets, or software packages.
+
+Metadata:
+  def: |
+    Information that explains and contextualises the files in a digital object,
+    describing what they are, how they were created, how they can be interpreted,
+    and how they should be managed.
+
+PID:
+  def: |
+    A stable, globally unique reference that ensures a digital object can be
+    identified, found, cited, and linked over time, independent of its storage
+    location.
+
+Versioning:
+  def: |
+    The practice of recording updates or changes to a digital object while keeping
+    earlier states accessible and citable.
+
+Fixity:
+  def: |
+    Methods for verifying the integrity of files by detecting corruption or
+    tampering through checksums or hashes.
+
+Provenance:
+  def: |
+    Documentation of how data was created, transformed, and derived, including
+    relationships such as raw → processed → analysed.
+
+Data Lineage:
+  def: |
+    The chain of related digital objects showing how one object was derived from
+    another across processing stages.
+
+Interoperability:
+  def: |
+    The ability of different systems and tools to exchange, interpret, and use a
+    digital object consistently across platforms.
+
+Reusability:
+  def: |
+    The capacity for a digital object to be understood and used in new contexts,
+    supported by clear metadata and stable identifiers.
+
+Preservation:
+  def: |
+    Ensuring long‑term accessibility and usability of digital objects as formats,
+    platforms, and storage systems evolve.
+
+Citation:
+  def: |
+    The practice of referencing a digital object using its persistent identifier to
+    support attribution, reproducibility, and tracking.
+
+Replica:
+  def: |
+    Copies of a digital object's files stored across different systems to improve
+    resilience, performance, and preservation without changing the object's
+    identity.
+
+Scratch:
+  def: |
+    A high-speed, temporary storage space on a High-Performance Computing cluster 
+    used to hold data while a computational job is running
+
+ELN:
+  def: |
+    A commercial Electronic Lab Notebook (ELN) used by scientists and researchers to document
+    experiments, manage lab inventory, and track protocols digitally instead of
+    using paper notebooks. 
+
+Tape Library:
+  def: |
+    Tape libraries store data on tape cartridges and use small robots to move them.
+    They are a low‑cost way to keep large amounts of data for a long time.
+
+Cold Storage:
+  def: |
+    Cold storage is for data you rarely need but must keep. It is cheap and durable,
+    but slower to access.
+
+Retention:
+  def: |
+    Retention systems define how long data should be kept and when it can be removed.
+    They help organisations follow rules and policies.
+
+Workflow Engines:
+  def: |
+    Workflow engines run tasks in the right order and automate repeated steps.
+    They help keep processes organised and consistent.
