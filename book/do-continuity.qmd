@@ -634,4 +634,4 @@ The future of RDM will not be defined by more systems, but by better‑designed 
 
 The work of building such infrastructures is ongoing, collaborative, and never finished. But with clear architectural principles and a shared understanding of digital‑objects and their continuity, the research community is well‑positioned to design platforms that support science not only today, but for decades to come.
 
-This is the foundation on which modern research infrastructures will be built.
+This continuity provides the foundation that will support research infrastructures as they evolve.
