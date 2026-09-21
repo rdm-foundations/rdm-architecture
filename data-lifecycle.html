@@ -48,6 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/glossary/glossary.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -243,6 +244,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -322,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="connecting-fair-and-the-rdm-life-cycle" class="level2">
 <h2 class="anchored" data-anchor-id="connecting-fair-and-the-rdm-life-cycle">Connecting FAIR and the RDM Life Cycle</h2>
-<p>The RDM life cycle describes how data evolves, while the FAIR principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.</p>
+<p>The <button class="glossary"><span class="def">The progression of data from working files to curated outputs, represented as Process, Analyse, Archived, and Published, aligned with the five operational data states.</span>RDM Life Cycle</button> describes how data evolves, while the <button class="glossary"><span class="def">Principles that make data Findable, Accessible, Interoperable, and Reusable, applied differently across lifecycle stages as data matures and stabilises.</span>FAIR</button> principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.</p>
 <p>A key insight is that FAIR does not “switch on” only at publication. Its scope shifts as data matures. Initially, FAIR supports collaboration and internal organisation. Later, it supports stewardship, preservation, and ultimately global reuse.</p>
 <blockquote class="blockquote">
 <p>FAIR applies at every stage — the audience and purpose simply changes.</p>
@@ -699,7 +705,7 @@ Figure&nbsp;4.1: FAIR Scopes and data states Across the Life Cycle.
 <p>In the Active state, rapid iteration and collaboration dominate. Files change frequently, so the priority is capturing provenance — records of how data was collected, processed, and transformed. At this point, provenance is often the only reliable account of what happened, when, and why.</p>
 <p>FAIR here is practical and inward‑facing: clear naming, shared access points, open formats, and well‑maintained notebooks that support reproducible teamwork.</p>
 <ul>
-<li><p><strong>Typical services</strong>: HPC scratch, project storage, ELNs, version control.</p></li>
+<li><p><strong>Typical services</strong>: <button class="glossary"><span class="def">A high-speed, temporary storage space on a High-Performance Computing cluster used to hold data while a computational job is running</span>HPC scratch</button>, project storage, <button class="glossary"><span class="def">A commercial Electronic Lab Notebook (ELN) used by scientists and researchers to document experiments, manage lab inventory, and track protocols digitally instead of using paper notebooks.</span>Elab Journals</button>, version control.</p></li>
 <li><p><strong>Audience</strong>: research team</p></li>
 <li><p><strong>Focus</strong>: efficient collaboration and early capture of provenance</p></li>
 </ul>
@@ -709,7 +715,7 @@ Figure&nbsp;4.1: FAIR Scopes and data states Across the Life Cycle.
 <p>During the Closed stage, data becomes sufficiently stable for structured organisation and description, but it is not yet ready for full stewardship. FAIR begins to support both sides: researchers consolidate provenance, and stewards gain the context needed for future decisions.</p>
 <p>The Locked state then acts as a buffer. Stabilised data is frozen in a read‑only condition, protected against accidental changes while retention and appraisal take place. FAIR remains minimal but essential, ensuring the data stays intelligible and manageable even in inactivity.</p>
 <ul>
-<li><p><strong>Typical services</strong>: tape libraries, cold storage, retention systems, workflow engines, metadata templates.</p></li>
+<li><p><strong>Typical services</strong>: <button class="glossary"><span class="def"></span>Tape Library</button>, <button class="glossary"><span class="def">Cold storage is for data you rarely need but must keep. It is cheap and durable, but slower to access.</span>Cold Storage</button>, <button class="glossary"><span class="def">Retention systems define how long data should be kept and when it can be removed. They help organisations follow rules and policies.</span>Retention Systems</button>, <button class="glossary"><span class="def">Workflow engines run tasks in the right order and automate repeated steps. They help keep processes organised and consistent.</span>Workflow Engines</button>, Metadata Templates.</p></li>
 <li><p><strong>Audience</strong>: research team + institutional stewards</p></li>
 <li><p><strong>Focus</strong>: stabilising data and consolidating provenance, safeguarding inactive data</p></li>
 </ul>
