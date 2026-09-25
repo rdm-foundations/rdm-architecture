@@ -6,44 +6,44 @@ execute:
 
 ## The Research Data Life Cycle
 
-The Research Data Management (RDM) life cycle describes how research data evolves from its initial creation to its long‑term preservation and potential reuse. It emphasises that data is not static: it moves through stages of increasing stability, documentation, and governance. Although terminology varies across models, four stages are widely recognised.
+The Research Data Management ([RDM](glossary.qmd#rdm)) life cycle describes how research data evolves from its initial creation to its long‑term [preservation](glossary.qmd#preservation) and potential reuse. It emphasises that data is not static: it moves through stages of increasing stability, documentation, and governance. Although terminology varies across models, four stages are widely recognised.
 
 ![Example Data Life Cycle by [UK Data Service](https://dam.ukdataservice.ac.uk/media/132177/data_lifecycle_recolour.png)](img/data_lifecycle.png){width=50%}
 
 
 **Process**
 
-Data is created, cleaned, and transformed. Files are volatile and frequently modified, often stored on local machines or compute systems. Organisation is pragmatic and workflow‑driven.
+Data is created, cleaned, and transformed. [Files](glossary.qmd#files) are volatile and frequently modified, often stored on local machines or compute systems. Organisation is pragmatic and workflow‑driven.
 
 **Analyse**
 
-Data begins to stabilise. Cleaned datasets, derived outputs, and refined scripts emerge. Some files gain scientific identity and become candidates for long‑term retention.
+Data begins to stabilise. Cleaned datasets, derived outputs, and refined scripts emerge. Some [files](glossary.qmd#files) gain scientific identity and become candidates for long‑term [retention](glossary.qmd#retention).
 
 **Archived**
 
-Selected files are packaged with metadata and persistent identifiers to form digital objects. These are stored in preservation‑oriented environments and protected through integrity checks, replication, and retention policies.
+Selected [files](glossary.qmd#files) are packaged with [metadata](glossary.qmd#metadata) and persistent identifiers to form digital objects. These are stored in [preservation](glossary.qmd#preservation)‑oriented environments and protected through integrity checks, replication, and [retention](glossary.qmd#retention) policies.
 
 **Published**
 
-A subset of digital objects is curated for dissemination. They receive rich descriptive metadata, globally resolvable identifiers, and are made discoverable for external reuse.
+A subset of digital objects is curated for dissemination. They receive rich descriptive [metadata](glossary.qmd#metadata), globally resolvable identifiers, and are made discoverable for external reuse.
 
 ## The FAIR Data Principles
 
-The FAIR Principles — _Findable, Accessible, Interoperable, Reusable_ — provide a framework for making data usable by humans and machines.
+The [FAIR](glossary.qmd#fair) Principles — _Findable, Accessible, Interoperable, Reusable_ — provide a framework for making data usable by humans and machines.
 
-**Findable**: Data is described with rich metadata and assigned persistent identifiers.
+**Findable**: Data is described with rich [metadata](glossary.qmd#metadata) and assigned persistent identifiers.
 
 **Accessible**: Data and metadata are retrievable through standard protocols; access conditions are documented.
 
 **Interoperable**: Data uses well‑defined formats, vocabularies, and standards.
 
-**Reusable**: Data is richly described, licensed, and documented, with clear provenance and quality information.
+**Reusable**: Data is richly described, licensed, and documented, with clear [provenance](glossary.qmd#provenance) and quality information.
 
 ## Connecting FAIR and the RDM Life Cycle
 
-The RDM Life Cycle describes how data evolves, while the FAIR" principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.
+The [RDM Life Cycle](glossary.qmd#rdm-life-cycle) describes how data evolves, while the [FAIR](glossary.qmd#fair)" principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.
 
-A key insight is that FAIR does not “switch on” only at publication. Its scope shifts as data matures. Initially, FAIR supports collaboration and internal organisation. Later, it supports stewardship, preservation, and ultimately global reuse.
+A key insight is that [FAIR](glossary.qmd#fair) does not “switch on” only at publication. Its scope shifts as data matures. Initially, FAIR supports collaboration and internal organisation. Later, it supports stewardship, [preservation](glossary.qmd#preservation), and ultimately global reuse.
 
 > FAIR applies at every stage — the audience and purpose simply changes.
 
@@ -55,7 +55,7 @@ We can distinguish five operational data states:
 1. **Active** — data is being created and modified; FAIR supports internal organisation and team‑level reuse.  
 2. **Closed** — data stabilises; FAIR begins to support institutional stewardship and future interpretation.  
 3. **Locked** — data is inactive and protected against accidental change; FAIR ensures it remains intelligible and manageable beyond the project, although responsibility has not yet transferred to a data steward.
-4. **Archived & Preserved** — data becomes a curated digital object, the responsibility is transferred to a data steward; FAIR enables long‑term discovery, integrity, and interoperability.  
+4. **Archived & Preserved** — data becomes a curated [digital object](glossary.qmd#digital-object), the responsibility is transferred to a data steward; FAIR enables long‑term discovery, integrity, and [interoperability](glossary.qmd#interoperability).  
 5. **Published** — selected objects enter the scholarly record; FAIR supports global findability, accessibility, and reuse.
 
 These states define how data is stored, who is responsible for it, and how richly it must be described.
@@ -85,9 +85,9 @@ The table below summarises how storage, permissions, and metadata evolve across 
     </tr>
 
     <tr>
-      <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., scratch on an HPC</em></td>
+      <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., [scratch](glossary.qmd#scratch) on an HPC</em></td>
       <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., S3 object store</em></td>
-      <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., tape library</em></td>
+      <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., [tape library](glossary.qmd#tape-library)</em></td>
       <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., local repository</em></td>
       <td style="border: 1px solid #ccc; padding: 6px;"><em>e.g., Dataverse</em></td>
     </tr>
@@ -115,8 +115,8 @@ The table below summarises how storage, permissions, and metadata evolve across 
   <tbody>
     <tr>
        <th style="border: 1px solid #ccc; padding: 6px; text-align: center;">Metadata (Context)</th>
-      <td style="border: 1px solid #ccc; padding: 6px;">Provenance<br>Descriptive</td>
-      <td style="border: 1px solid #ccc; padding: 6px;">Provenance<br>Descriptive</td>
+      <td style="border: 1px solid #ccc; padding: 6px;">[Provenance](glossary.qmd#provenance)<br>Descriptive</td>
+      <td style="border: 1px solid #ccc; padding: 6px;">[Provenance](glossary.qmd#provenance)<br>Descriptive</td>
       <td style="border: 1px solid #ccc; padding: 6px;">Provenance<br>Descriptive</td>
       <td style="border: 1px solid #ccc; padding: 6px;">Collections<br>Limited descriptive</td>
       <td style="border: 1px solid #ccc; padding: 6px;">Publication metadata</td>
@@ -276,10 +276,10 @@ The five states tie the life cycle and FAIR together: each life‑cycle stage co
 In this way, the data states form the conceptual bridge that connects the evolving states of data (the life cycle) with the expectations placed on it (FAIR).
 
 
-| **RDM Stage** | **Data State(s)** | **Purpose** |
+| **[RDM](glossary.qmd#rdm) Stage** | **Data State(s)** | **Purpose** |
 |---------------|-------------------|-------------|
 | **Process** | Active | Create, transform, analyse working files |
-| **Analyse** | Active → Closed | Stabilise results, prepare for retention |
+| **Analyse** | Active → Closed | Stabilise results, prepare for [retention](glossary.qmd#retention) |
 | **Transition** | Closed → Locked | Freeze data to prevent accidental change |
 | **Archived** | Archived / Preserved | Manage digital objects under stewardship |
 | **Published** | Published / Preserved | Disseminate curated digital objects |
@@ -291,7 +291,7 @@ This mapping makes clear that data states are not an alternative to the life cyc
 
 *Putting it all together*
 
-The following sections describe how FAIR manifests in each data state and how this aligns with the stages of the RDM Life Cycle.
+The following sections describe how FAIR manifests in each data state and how this aligns with the stages of the [RDM Life Cycle](glossary.qmd#rdm-life-cycle).
 
 ### FAIR for Teams
 
@@ -299,7 +299,7 @@ In the Active state, rapid iteration and collaboration dominate. Files change fr
 
 FAIR here is practical and inward‑facing: clear naming, shared access points, open formats, and well‑maintained notebooks that support reproducible teamwork.
 
-- **Typical services**: HPC scratch, project storage, Elab Journals, version control.
+- **Typical services**: HPC [scratch](glossary.qmd#scratch), project storage, Elab Journals, version control.
 
 - **Audience**: research team
 
@@ -311,7 +311,7 @@ During the Closed stage, data becomes sufficiently stable for structured organis
 
 The Locked state then acts as a buffer. Stabilised data is frozen in a read‑only condition, protected against accidental changes while retention and appraisal take place. FAIR remains minimal but essential, ensuring the data stays intelligible and manageable even in inactivity.
 
-- **Typical services**: Tape Library, Cold Storage, Retention Systems, Workflow Engines, Metadata Templates.
+- **Typical services**: [Tape Library](glossary.qmd#tape-library), [Cold Storage](glossary.qmd#cold-storage), Retention Systems, [Workflow Engines](glossary.qmd#workflow-engines), Metadata Templates.
 
 - **Audience**: research team + institutional stewards
 
@@ -319,9 +319,9 @@ The Locked state then acts as a buffer. Stabilised data is frozen in a read‑on
 
 ### FAIR for Stewardship (Archived)
 
-At this stage, data becomes a managed digital object. Files are packaged with structured metadata, assigned persistent identifiers, and placed in systems designed for long‑term integrity and accessibility. Provenance gathered earlier provides the context needed for authenticity, appraisal, and future reuse.
+At this stage, data becomes a managed [digital object](glossary.qmd#digital-object). Files are packaged with structured metadata, assigned persistent identifiers, and placed in systems designed for long‑term integrity and accessibility. Provenance gathered earlier provides the context needed for authenticity, appraisal, and future reuse.
 
-FAIR now operates at the level of institutional governance: persistent identifiers, controlled access, preservation metadata, and versioning.
+FAIR now operates at the level of institutional governance: persistent identifiers, controlled access, preservation metadata, and [versioning](glossary.qmd#versioning).
 
 - **Typical services**: institutional repositories, preservation systems.
 
@@ -339,11 +339,11 @@ Here FAIR reaches full scope: discoverability, standardised access, community vo
 
 - **Audience**: global research community
 
-- **Focus**: discovery, citation, and reuse
+- **Focus**: discovery, [citation](glossary.qmd#citation), and reuse
 
 ## Summary
 
-This chapter began by presenting the RDM life cycle and FAIR as separate frameworks. By following data through its states, we can now see how they converge into a single, coherent model of stewardship.
+This chapter began by presenting the [RDM life cycle](glossary.qmd#rdm-life-cycle) and FAIR as separate frameworks. By following data through its states, we can now see how they converge into a single, coherent model of stewardship.
 
 - The RDM life cycle describes how data evolves from volatile working files to curated, citable outputs.
 
@@ -357,7 +357,7 @@ This chapter began by presenting the RDM life cycle and FAIR as separate framewo
 
 Together, these elements form a unified framework for managing data from creation to long‑term reuse.
 
-This alignment reveals that what moves through these states is not merely a collection of files, but a structured digital object. As data progresses through the life cycle, it becomes clear that files alone are insufficient. A file without context is difficult to interpret, impossible to trust, and often unusable. To be managed, preserved, and reused, data needs:
+This alignment reveals that what moves through these states is not merely a collection of files, but a structured [digital object](glossary.qmd#digital-object). As data progresses through the life cycle, it becomes clear that files alone are insufficient. A file without context is difficult to interpret, impossible to trust, and often unusable. To be managed, preserved, and reused, data needs:
 
 - metadata describing what it is,
 - provenance explaining how it came to be,
