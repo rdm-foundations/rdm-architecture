@@ -6,7 +6,7 @@ execute:
 
 ## The Research Data Life Cycle
 
-The Research Data Management ([RDM](glossary.qmd#rdm)) life cycle describes how research data evolves from its initial creation to its long‑term [preservation](glossary.qmd#preservation) and potential reuse. It emphasises that data is not static: it moves through stages of increasing stability, documentation, and governance. Although terminology varies across models, four stages are widely recognised.
+The Research Data Management (RDM) life cycle describes how research data evolves from its initial creation to its long‑term [preservation](glossary.qmd#preservation) and potential reuse. It emphasises that data is not static: it moves through stages of increasing stability, documentation, and governance. Although terminology varies across models, four stages are widely recognised.
 
 ![Example Data Life Cycle by [UK Data Service](https://dam.ukdataservice.ac.uk/media/132177/data_lifecycle_recolour.png)](img/data_lifecycle.png){width=50%}
 
