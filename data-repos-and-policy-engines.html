@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -288,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The previous chapter outlined the layers of RDM infrastructure and showed how storage, metadata, identifiers, and compute each contribute to forming and using digital objects. We now turn to the first systems that operate above storage — the systems responsible for coordinating files, metadata, identifiers, and policies as digital objects emerge and stabilise. These systems fall into two complementary categories: data repositories and policy engines.</p>
+<p>The previous chapter outlined the layers of <a href="./glossary.html#rdm">RDM</a> infrastructure and showed how storage, <a href="./glossary.html#metadata">metadata</a>, identifiers, and compute each contribute to forming and using digital objects. We now turn to the first systems that operate above storage — the systems responsible for coordinating <a href="./glossary.html#files">files</a>, metadata, identifiers, and policies as digital objects emerge and stabilise. These systems fall into two complementary categories: data repositories and policy engines.</p>
 <p>Storage keeps files safe, but it does not coordinate:</p>
 <ul>
 <li>the <em>files</em> themselves<br>
@@ -298,7 +298,7 @@ ul.task-list li input[type="checkbox"] {
 <li>their <em>metadata</em><br>
 </li>
 <li>their <em>persistent identifiers</em></li>
-<li>their <em>relationships</em> and provenance</li>
+<li>their <em>relationships</em> and <a href="./glossary.html#provenance">provenance</a></li>
 <li>their <em>lifecycle state</em></li>
 </ul>
 <p>This coordination is needed throughout the entire data lifecycle, especially in the early, volatile stages where files are created, transformed, and stabilised. Yet these stages often lack infrastructure capable of treating files as emerging digital objects.</p>
@@ -321,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>Historically, the term data repository referred to systems that <em>actively managed digital objects</em> using policies for storage, metadata, persistent identifiers and access. Early repository designs assumed that digital objects were created, governed, and preserved inside the repository itself.</p>
 <p>Over time, the meaning has shifted.<br>
-In contemporary research infrastructures, <em>data repository</em> usually refers to platforms that manage digital objects in their archived or published state, after files have stabilised and are ready for curation, dissemination, and long‑term preservation.</p>
+In contemporary research infrastructures, <em>data repository</em> usually refers to platforms that manage digital objects in their archived or published state, after files have stabilised and are ready for curation, dissemination, and long‑term <a href="./glossary.html#preservation">preservation</a>.</p>
 <p>There is currently no established term for platforms that manage digital objects during the active, volatile stages of research. These systems sit above storage, coordinate files and metadata, and apply policies long before data reaches a repository.</p>
 <p>To describe this class of platforms clearly and consistently, this book adopts the term <em>policy engines</em> for software and platforms which manage digital objects during active research. This distinction is central to understanding why repositories and policy engines play complementary roles in Research Data Management.</p>
 </div>

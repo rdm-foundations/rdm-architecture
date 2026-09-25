@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -317,13 +317,13 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="where-the-digitalobject-layer-breaks-without-orchestration" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-digitalobject-layer-breaks-without-orchestration">Where the Digital‑Object Layer Breaks Without Orchestration</h2>
-<p>Even when individual components are well designed, an RDM platform that relies only on APIs, i.e.&nbsp;without a shared digital-object layer and orchestration, cannot guarantee that identity, metadata, and provenance remain intact across transitions. The following examples illustrate how and where the digital object breaks when systems exchange data but do not share lifecycle state.</p>
+<p>Even when individual components are well designed, an <a href="./glossary.html#rdm">RDM</a> platform that relies only on APIs, i.e.&nbsp;without a shared digital-object layer and orchestration, cannot guarantee that identity, <a href="./glossary.html#metadata">metadata</a>, and <a href="./glossary.html#provenance">provenance</a> remain intact across transitions. The following examples illustrate how and where the <a href="./glossary.html#digital-object">digital object</a> breaks when systems exchange data but do not share lifecycle state.</p>
 </section>
 <section id="failure-modes-in-apionly-transitions" class="level2">
 <h2 class="anchored" data-anchor-id="failure-modes-in-apionly-transitions">Failure Modes in API‑Only Transitions</h2>
 <section id="policy-engine-repository-duplicate-publications-and-lost-lifecycle-state" class="level3">
 <h3 class="anchored" data-anchor-id="policy-engine-repository-duplicate-publications-and-lost-lifecycle-state">1. Policy Engine → Repository: Duplicate Publications and Lost Lifecycle State</h3>
-<p>A policy engine manages active data and often forms digital objects early in the lifecycle. A repository manages publication, curation, and long‑term preservation. When the two are connected only through an API, neither system has visibility into the other’s lifecycle state.</p>
+<p>A policy engine manages active data and often forms digital objects early in the lifecycle. A repository manages publication, curation, and long‑term <a href="./glossary.html#preservation">preservation</a>. When the two are connected only through an API, neither system has visibility into the other’s lifecycle state.</p>
 <p>This leads to several failure modes:</p>
 <ul>
 <li>the same dataset can be published multiple times<br>
@@ -359,7 +359,7 @@ The digital object forks into multiple versions, each with its own identifiers a
 <li>sometimes even metadata tagging</li>
 </ul>
 <p>All of these are legitimate user actions in a sync environment.<br>
-The problem is not that the digital object in the policy engine or repository becomes unstable, it remains stable, but that its connection to the original working files becomes unreliable if the sync service is treated as a source of truth.</p>
+The problem is not that the digital object in the policy engine or repository becomes unstable, it remains stable, but that its connection to the original working <a href="./glossary.html#files">files</a> becomes unreliable if the sync service is treated as a source of truth.</p>
 <p>When a repository or policy engine ingests files from a sync service via an API:</p>
 <ul>
 <li>files may disappear from the sync service after ingestion<br>
@@ -641,7 +641,7 @@ Figure&nbsp;17.2: With an orchestration layer acting as the digital-object layer
 </li>
 <li>the digital object loses coherence</li>
 </ul>
-<p>This is why a FAIR‑aligned platform must treat the digital object as a shared, governed entity, not an emergent side effect of API calls.</p>
+<p>This is why a <a href="./glossary.html#fair">FAIR</a>‑aligned platform must treat the digital object as a shared, governed entity, not an emergent side effect of API calls.</p>
 </section>
 <section id="ensuring-continuity-across-the-lifecycle-through-an-orchestration-layer" class="level2">
 <h2 class="anchored" data-anchor-id="ensuring-continuity-across-the-lifecycle-through-an-orchestration-layer">Ensuring Continuity Across the Lifecycle Through an Orchestration Layer</h2>
@@ -649,7 +649,7 @@ Figure&nbsp;17.2: With an orchestration layer acting as the digital-object layer
 <p>This is the current state of the art in many research environments:<br>
 systems exchange data, but they do not share a digital‑object model.<br>
 As a result, digital objects fracture as they move.</p>
-<p>The international FAIR Digital Object (FDO) community has been working to solve exactly this problem. Their work formalised in the FDO‑IP (FAIR Digital Object Interoperability Principles) provides a conceptual and technical foundation for ensuring that digital objects remain coherent across the entire lifecycle, regardless of how many systems they pass through.</p>
+<p>The international FAIR Digital Object (FDO) community has been working to solve exactly this problem. Their work formalised in the FDO‑IP (FAIR Digital Object <a href="./glossary.html#interoperability">Interoperability</a> Principles) provides a conceptual and technical foundation for ensuring that digital objects remain coherent across the entire lifecycle, regardless of how many systems they pass through.</p>
 <p>An orchestration layer is the architectural mechanism that implements these principles in practice.</p>
 </section>
 <section id="the-problem-rdm-systems-without-a-shared-digitalobject-layer" class="level2">
@@ -718,7 +718,7 @@ It was built <em>by and for the life sciences community</em>, where research obj
 <p>Because of this complexity, SEEK does not fit neatly into a single RDM category.<br>
 Instead, it combines capabilities traditionally associated with:</p>
 <ul>
-<li><strong>repositories</strong> (stable identifiers, landing pages, versioning)<br>
+<li><strong>repositories</strong> (stable identifiers, landing pages, <a href="./glossary.html#versioning">versioning</a>)<br>
 </li>
 <li><strong>policy engines</strong> (structured organisation, access control, workflow‑aware provenance)<br>
 </li>
@@ -865,7 +865,7 @@ Figure&nbsp;17.3: FAIRDOM‑SEEK operates in the FAIRification / digital‑objec
 </li>
 <li>workflow‑aware provenance (via RO‑Crate)<br>
 </li>
-<li>integration with workflow engines</li>
+<li>integration with <a href="./glossary.html#workflow-engines">workflow engines</a></li>
 </ul>
 </section>
 <section id="metadataservicelike-capabilities" class="level4">
@@ -886,13 +886,8 @@ Figure&nbsp;17.3: FAIRDOM‑SEEK operates in the FAIRification / digital‑objec
 <section id="rocrate-vs.-oaisstyle-archival-packaging" class="level3">
 <h3 class="anchored" data-anchor-id="rocrate-vs.-oaisstyle-archival-packaging">RO‑Crate vs.&nbsp;OAIS‑Style Archival Packaging</h3>
 <p>A key reason SEEK sits between categories is their use of RO‑Crate, a packaging format optimised for FAIR metadata, semantic relationships, and research‑object context.<br>
-Repositories and archives, by contrast, rely on OAIS‑aligned standards such as METS, PREMIS, and BagIt, which focus on long‑term preservation and fixity.</p>
+Repositories and archives, by contrast, rely on OAIS‑aligned standards such as METS, PREMIS, and BagIt, which focus on long‑term preservation and <a href="./glossary.html#fixity">fixity</a>.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 32%">
-<col style="width: 57%">
-</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Aspect</strong></th>
@@ -914,7 +909,7 @@ Repositories and archives, by contrast, rely on OAIS‑aligned standards such as
 <tr class="odd">
 <td><strong>Focus</strong></td>
 <td>Relationships, provenance, context</td>
-<td>Integrity, authenticity, retention</td>
+<td>Integrity, authenticity, <a href="./glossary.html#retention">retention</a></td>
 </tr>
 <tr class="even">
 <td><strong>Lifecycle stage</strong></td>

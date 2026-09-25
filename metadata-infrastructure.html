@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="portals-harvesters-indexers-and-serialisation" class="level3">
 <h3 class="anchored" data-anchor-id="portals-harvesters-indexers-and-serialisation">Portals, Harvesters, Indexers, and Serialisation</h3>
-<p>Metadata becomes truly powerful only when it can be shared, discovered, aggregated, and reused across systems. For this to work, research infrastructures rely on a set of services that collect, expose, and standardise metadata at scale. These services form the metadata infrastructure that underpins FAIR data ecosystems.</p>
+<p><a href="./glossary.html#metadata">Metadata</a> becomes truly powerful only when it can be shared, discovered, aggregated, and reused across systems. For this to work, research infrastructures rely on a set of services that collect, expose, and standardise metadata at scale. These services form the metadata infrastructure that underpins <a href="./glossary.html#fair">FAIR</a> data ecosystems.</p>
 <p>This chapter introduces the main components of that infrastructure: metadata portals, metadata harvesters, indexing services, and the serialisation formats that allow metadata to move between systems.</p>
 </section>
 <section id="why-local-metadata-alone-is-not-enough" class="level2">
@@ -381,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>No cross‑repository search — users must know the repository exists before they can find the data<br>
 </li>
-<li>No integration with PID services — identifiers may not be resolvable or linked to global discovery systems</li>
+<li>No integration with <a href="./glossary.html#pid">PID</a> services — identifiers may not be resolvable or linked to global discovery systems</li>
 </ul>
 <p>This is why FAIR emphasises that metadata must be findable and accessible, not merely present.</p>
 <p>To achieve this, repositories must expose metadata through standard protocols (e.g., OAI‑PMH, ResourceSync, REST APIs) so that external services can collect and index it.</p>
@@ -699,7 +699,7 @@ Harvesters collect metadata; indexers make it findable.</p>
 </section>
 <section id="semantic-web-and-linked-data-formats" class="level3">
 <h3 class="anchored" data-anchor-id="semantic-web-and-linked-data-formats">2. Semantic Web and Linked Data Formats</h3>
-<p>These formats express metadata as graphs, enabling interoperability and machine reasoning.</p>
+<p>These formats express metadata as graphs, enabling <a href="./glossary.html#interoperability">interoperability</a> and machine reasoning.</p>
 <ul>
 <li>RDF/XML<br>
 </li>
@@ -717,7 +717,7 @@ Harvesters collect metadata; indexers make it findable.</p>
 </li>
 <li>schema.org markup for dataset discovery<br>
 </li>
-<li>provenance tracking (e.g., PROV‑O)</li>
+<li><a href="./glossary.html#provenance">provenance</a> tracking (e.g., PROV‑O)</li>
 </ul>
 </section>
 <section id="why-serialisation-matters" class="level3">
@@ -845,7 +845,7 @@ The metadata fields are:</p>
 <p>Different serialisation formats serve different purposes, and the right choice depends on how the metadata will be used.</p>
 <p><strong>JSON</strong> is ideal when metadata needs to be exchanged quickly and flexibly between systems. It is the natural choice for REST APIs, lightweight services, and modern repositories because it is easy to generate, easy to parse, and widely supported by programming languages.</p>
 <p><strong>XML</strong> is preferred when metadata must follow a strict schema and be validated against a formal structure. Many harvesting protocols (such as OAI‑PMH) and long‑standing metadata standards (like Dublin Core XML or DataCite XML) rely on XML because of its predictability and strong validation capabilities.</p>
-<p><strong>YAML</strong> works well for human‑authored metadata, such as workflow descriptions, lab templates, or configuration files. It is readable and concise, but less suitable for large‑scale automated processing.</p>
+<p><strong>YAML</strong> works well for human‑authored metadata, such as workflow descriptions, lab templates, or configuration <a href="./glossary.html#files">files</a>. It is readable and concise, but less suitable for large‑scale automated processing.</p>
 <p><strong>CSV/TSV</strong> is the simplest option for tabular or variable‑level metadata. It is easy to create and edit, especially for researchers working in spreadsheets, but it cannot express hierarchical or semantic relationships.</p>
 <p><strong>RDF serialisations</strong> such as Turtle, JSON‑LD, and RDF/XML are the best choice when metadata needs to be interoperable, machine‑interpretable, and semantically rich. They allow metadata to be integrated into knowledge graphs, linked to ontologies, and connected across systems using globally unique identifiers. JSON‑LD is particularly useful for embedding semantic metadata on the web, while Turtle is preferred for human‑readable Linked Data.</p>
 <p>In practice, many repositories support multiple serialisations: a simple JSON or XML representation for APIs and harvesting, and a semantic RDF representation for Linked Data and FAIR interoperability. The choice depends on whether the priority is ease of use, strict validation, or semantic richness.</p>

@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -355,15 +355,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Persistent Identifier (PID) services are a fundamental component of modern research infrastructures and Research Data Management (RDM) systems. They provide stable, globally unique identifiers for digital and organizational entities within the research ecosystem. These entities include datasets, publications, software, researchers, institutions, research projects, funding information, art work, instruments, dig sites and more.</p>
-<p>A persistent identifier ensures that a digital object can be reliably referenced, discovered, and accessed over time, even if its physical location changes. PID services are typically operated by international or national level organizations and integrated into data repositories, publishing platforms, and research infrastructure services. By assigning persistent identifiers to digital objects and actors, these systems enable reliable citation, linking between resources, and automated machine processing.</p>
-<p>Persistent identifiers also play a central role in enabling interoperable and FAIR‑compliant research infrastructures.</p>
+<p>Persistent Identifier (<a href="./glossary.html#pid">PID</a>) services are a fundamental component of modern research infrastructures and Research Data Management (<a href="./glossary.html#rdm">RDM</a>) systems. They provide stable, globally unique identifiers for digital and organizational entities within the research ecosystem. These entities include datasets, publications, software, researchers, institutions, research projects, funding information, art work, instruments, dig sites and more.</p>
+<p>A persistent identifier ensures that a <a href="./glossary.html#digital-object">digital object</a> can be reliably referenced, discovered, and accessed over time, even if its physical location changes. PID services are typically operated by international or national level organizations and integrated into data repositories, publishing platforms, and research infrastructure services. By assigning persistent identifiers to digital objects and actors, these systems enable reliable <a href="./glossary.html#citation">citation</a>, linking between resources, and automated machine processing.</p>
+<p>Persistent identifiers also play a central role in enabling interoperable and <a href="./glossary.html#fair">FAIR</a>‑compliant research infrastructures.</p>
 <p>In this chapter we will focus on PIDs and PID services for digital objects, i.e.&nbsp;data. A general overview over PIDs can be found in the chapter <a href="./pids.html">Persistent Identifiers</a>.</p>
 <section id="when-to-assign-a-persistent-identifier" class="level2">
 <h2 class="anchored" data-anchor-id="when-to-assign-a-persistent-identifier">When to Assign a Persistent Identifier</h2>
 <p>When implementing an RDM service or infrastructure component, persistent identifiers directly support the FAIR Data Principles, particularly the first principle:</p>
 <p><strong><a href="https://www.go-fair.org/fair-principles/f1-meta-data-assigned-globally-unique-persistent-identifiers/">F1</a>. (Meta)data are assigned a globally unique and persistent identifier.</strong> “Principle F1 is arguably the most important because it will be hard to achieve other aspects of FAIR without globally unique and persistent identifiers.”</p>
-<p>However, not every piece of data produced during research requires a PID immediately. During early stages of the research data lifecycle, datasets may still be experimental, incomplete, or subject to frequent changes. Assigning persistent identifiers too early can lead to unnecessary versioning and administrative overhead.</p>
+<p>However, not every piece of data produced during research requires a PID immediately. During early stages of the research data lifecycle, datasets may still be experimental, incomplete, or subject to frequent changes. Assigning persistent identifiers too early can lead to unnecessary <a href="./glossary.html#versioning">versioning</a> and administrative overhead.</p>
 <p>A PID should typically be assigned once data becomes a stable digital object. Common situations in which a persistent identifier should be assigned include:</p>
 <ul>
 <li>Data publication in a repository</li>
@@ -560,7 +560,7 @@ Figure&nbsp;15.1: The main organisations DONA, EPIC and DOI
 <blockquote class="blockquote">
 <p><strong>The Handle System provides the underlying technical infrastructure for persistent identifiers.</strong></p>
 </blockquote>
-<p>It enables globally unique identifiers, known as <em>handles</em>, to be assigned to digital objects and resolved through a distributed network of handle servers. When a handle is queried, the system returns associated metadata, such as the current URL of the resource. This separation between the identifier and the object’s location ensures persistence even when the resource moves.</p>
+<p>It enables globally unique identifiers, known as <em>handles</em>, to be assigned to digital objects and resolved through a distributed network of handle servers. When a handle is queried, the system returns associated <a href="./glossary.html#metadata">metadata</a>, such as the current URL of the resource. This separation between the identifier and the object’s location ensures persistence even when the resource moves.</p>
 <p>Built on top of the Handle System is the Digital Object Identifier (DOI) system, a widely used persistent identifier scheme for scholarly publications, datasets, and other research outputs.</p>
 <blockquote class="blockquote">
 <p><strong>DOIs use the handle protocol for resolution but add additional governance, metadata standards, and registration workflows tailored to scholarly communication.</strong></p>
@@ -587,11 +587,6 @@ Figure&nbsp;15.1: The main organisations DONA, EPIC and DOI
 <pre><code>21.T11998/0000-001A-3905-F</code></pre>
 <p>A Handle record in ePIC may include multiple typed entries such as:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 43%">
-<col style="width: 37%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Type</th>
@@ -608,7 +603,7 @@ Figure&nbsp;15.1: The main organisations DONA, EPIC and DOI
 <tr class="even">
 <td><code>CHECKSUM</code></td>
 <td><code>sha256:...</code></td>
-<td>Data integrity verification</td>
+<td><a href="./glossary.html#data-integrity">Data integrity</a> verification</td>
 </tr>
 <tr class="odd">
 <td><code>EMAIL</code></td>
@@ -698,7 +693,7 @@ Figure&nbsp;15.1: The main organisations DONA, EPIC and DOI
 </tr>
 </tbody>
 </table>
-<p>Thus, ePIC uses the Handle System as a metadata‑aware PID infrastructure, designed to support interoperability across research infrastructures and to maintain actionable links between data objects, services, and workflows. In contrast, the DOI system uses the Handle System primarily as a resolution layer, while the descriptive metadata and publication‑oriented services are maintained in separate, domain‑specific registries such as DataCite and Crossref. Though ePIC users also sometimes set up the Handle system simimlarly to the DOI system, using it as a resolution layer, connected to their own data management software or internal infrastructures.</p>
+<p>Thus, ePIC uses the Handle System as a metadata‑aware PID infrastructure, designed to support <a href="./glossary.html#interoperability">interoperability</a> across research infrastructures and to maintain actionable links between data objects, services, and workflows. In contrast, the DOI system uses the Handle System primarily as a resolution layer, while the descriptive metadata and publication‑oriented services are maintained in separate, domain‑specific registries such as DataCite and Crossref. Though ePIC users also sometimes set up the Handle system simimlarly to the DOI system, using it as a resolution layer, connected to their own data management software or internal infrastructures.</p>
 <p>Whereas DOIs are embedded in the scholarly publishing ecosystem—complete with citation metadata, indexing in bibliographic databases, and integration with publication workflows—ePIC identifiers are optimized for technical interoperability, enabling research infrastructures to reference, connect, and manage data objects across distributed systems. In other words, DOI focuses on publication, discoverability, and metadata indexing, while EPIC focuses on infrastructure‑level persistence, machine‑actionable metadata, and cross‑system integration.</p>
 <div class="cell" data-fig-width="8" data-layout-align="center">
 <div class="cell-output-display">
@@ -1021,7 +1016,7 @@ For example, ePIC Handles often store:</p>
 </li>
 <li>machine‑actionable metadata</li>
 </ul>
-<p>This flexibility allows Handles to describe not only web resources but also files, collections, workflows, or non‑HTTP services.</p>
+<p>This flexibility allows Handles to describe not only web resources but also <a href="./glossary.html#files">files</a>, collections, workflows, or non‑HTTP services.</p>
 <p>When the location of a digital object changes, only the Handle record needs to be updated.<br>
 The identifier itself remains stable, ensuring persistent and reliable access over time. The same is actually also true for all other information which is captured in the PID metadata.</p>
 </section>
@@ -1117,7 +1112,7 @@ EUDAT maintains large‑scale European research data services, and <code>pyhandl
 <h2 class="anchored" data-anchor-id="from-components-to-coordinated-infrastructure">From Components to Coordinated Infrastructure</h2>
 <p>Across the previous chapters we followed the full evolution of research data: from volatile active files, to stable digital objects shaped by policy engines and repositories, to the metadata and PID infrastructures that make those objects discoverable, citable, and connected across systems.</p>
 <p>By assembling storage, repositories, policy engines, PID services, metadata infrastructure, and compute into a coherent platform, we move from isolated tools to a FAIR‑aligned ecosystem. But a platform is only the beginning. Once the components interoperate, the question becomes how to operate this ecosystem predictably — how to coordinate workflows, enforce policies, preserve identity, and ensure that digital objects remain whole as they move.</p>
-<p>FAIR for infrastructure means ensuring the continuity of digital objects as they move from service to service preserving their identity, metadata, and provenance across every transition in the platform.</p>
+<p>FAIR for infrastructure means ensuring the continuity of digital objects as they move from service to service preserving their identity, metadata, and <a href="./glossary.html#provenance">provenance</a> across every transition in the platform.</p>
 <p>The next chapter turns to this operational layer, examining how modern infrastructures orchestrate data, metadata, identifiers, and provenance across the entire lifecycle so that FAIRness is preserved end‑to‑end.</p>
 </section>
 <section id="references" class="level2">

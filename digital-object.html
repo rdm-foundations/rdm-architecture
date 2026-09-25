@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -296,10 +296,10 @@ ul.task-list li input[type="checkbox"] {
 
 <p>In the previous chapter, we learnt that data should be managed as structured digital objects. This chapter describes these digital objects in more detail.</p>
 <p>A digital (or data) object is a self‑contained, structured unit of information that exists in electronic form. It is more than just raw bits: it is a combination of <em>content</em>, <em>context</em>, and <em>identity</em> that allows computers and humans to store, interpret, preserve, and reuse information reliably.</p>
-<p>At its core, a digital object consists of three interdependent components:</p>
+<p>At its core, a <a href="./glossary.html#digital-object">digital object</a> consists of three interdependent components:</p>
 <ul>
-<li><p><a href="./files.html"><strong>Bitstream(s) or File(s)</strong></a> — the actual digital content, stored as one or more files. These may be documents, images, audio recordings, videos, datasets, software packages, or any other digital material. On their own, files are simply encoded data; they require context to be meaningful.</p></li>
-<li><p><a href="./metadata.html"><strong>Metadata</strong></a> — the descriptive, structural, and technical information that explains how to interpret the files and how the object should be managed. Metadata identifies what the object is, how it is organized, who created it, when it was produced, and how it can be rendered or preserved. It provides the essential context that turns raw bits into understandable content.</p></li>
+<li><p><a href="./files.html"><strong>Bitstream(s) or File(s)</strong></a> — the actual digital content, stored as one or more <a href="./glossary.html#files">files</a>. These may be documents, images, audio recordings, videos, datasets, software packages, or any other digital material. On their own, files are simply encoded data; they require context to be meaningful.</p></li>
+<li><p><a href="./metadata.html"><strong>Metadata</strong></a> — the descriptive, structural, and technical information that explains how to interpret the files and how the object should be managed. <a href="./glossary.html#metadata">Metadata</a> identifies what the object is, how it is organized, who created it, when it was produced, and how it can be rendered or preserved. It provides the essential context that turns raw bits into understandable content.</p></li>
 <li><p><a href="./pids.html"><strong>Persistent Identifier (PID)</strong></a> — a stable, globally unique reference (such as a DOI, Handle, or ARK) that ensures the object can be identified, found, cited, and linked over time, even if its storage location changes. The persistent identifier anchors the object’s identity in a durable way.</p></li>
 </ul>
 <div class="cell" data-fig-width="3" data-layout-align="center">
@@ -486,14 +486,14 @@ Figure&nbsp;5.2: Two common Persistent Identifier – File – Metadata relation
 <h3 class="anchored" data-anchor-id="why-digital-objects-matter">Why Digital Objects Matter</h3>
 <p>Digital objects are the foundation of modern research data management systems. Their structured nature enables:</p>
 <ul>
-<li><p><strong>Preservation</strong> — keeping knowledge accessible as formats, platforms, and storage systems evolve.<br>
+<li><p><strong><a href="./glossary.html#preservation">Preservation</a></strong> — keeping knowledge accessible as formats, platforms, and storage systems evolve.<br>
 Files can be migrated, metadata enriched, and storage reorganized without breaking the object’s identity.</p></li>
-<li><p><strong>Interoperability</strong> — ensuring different tools and repositories can exchange and interpret the object consistently.<br>
+<li><p><strong><a href="./glossary.html#interoperability">Interoperability</a></strong> — ensuring different tools and repositories can exchange and interpret the object consistently.<br>
 Content, metadata, and identifiers travel together, preserving meaning across systems.</p></li>
-<li><p><strong>Reusability and sharing</strong> — supporting research, education, and collaboration.<br>
+<li><p><strong><a href="./glossary.html#reusability">Reusability</a> and sharing</strong> — supporting research, education, and collaboration.<br>
 Clear metadata, stable identifiers, and standardized structures make digital objects easy to understand and integrate into new workflows.</p></li>
-<li><p><strong>Reliable citation and tracking</strong> — through persistent identifiers that remain valid even as files move or metadata changes.<br>
-Persistent identifiers support accurate citation, versioning, provenance tracking, and automated linking.</p></li>
+<li><p><strong>Reliable <a href="./glossary.html#citation">citation</a> and tracking</strong> — through persistent identifiers that remain valid even as files move or metadata changes.<br>
+Persistent identifiers support accurate citation, <a href="./glossary.html#versioning">versioning</a>, <a href="./glossary.html#provenance">provenance</a> tracking, and automated linking.</p></li>
 <li><p><strong>Robust storage strategies</strong> — enabling multiple replicas across diverse storage environments while maintaining a single, consistent identity.<br>
 Replicas of files on different storage systems improve resilience and performance without compromising citation or access.</p></li>
 </ul>
@@ -501,7 +501,7 @@ Replicas of files on different storage systems improve resilience and performanc
 <ul>
 <li><strong>Versioning</strong> — recording updates or corrections while keeping earlier states accessible and citable.<br>
 </li>
-<li><strong>Fixity</strong> — verifying file integrity through checksums or hashes to detect corruption or tampering.<br>
+<li><strong><a href="./glossary.html#fixity">Fixity</a></strong> — verifying file integrity through checksums or hashes to detect corruption or tampering.<br>
 </li>
 <li><strong>Provenance</strong> — documenting how data came to be, including transformations and dependencies.<br>
 This includes relationships such as <em>raw data → processed data → analysed data</em>, making the object’s history transparent and reproducible.</li>

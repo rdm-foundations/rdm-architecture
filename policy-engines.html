@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -310,28 +310,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Most research data is created, transformed, and copied to different storage systems long before it reaches a repository. During this active phase, files are volatile, distributed, and constantly changing. Managing this evolving data requires a different class of system: policy engines.</p>
-<p>Policy engines coordinate files, metadata, and storage across active research environments. They treat files as emerging digital objects, enabling governance before the archiving and publication stage. Where repositories focus on curation and dissemination, policy engines focus on orchestration:</p>
+<p>Most research data is created, transformed, and copied to different storage systems long before it reaches a repository. During this active phase, <a href="./glossary.html#files">files</a> are volatile, distributed, and constantly changing. Managing this evolving data requires a different class of system: policy engines.</p>
+<p>Policy engines coordinate files, <a href="./glossary.html#metadata">metadata</a>, and storage across active research environments. They treat files as emerging digital objects, enabling governance before the archiving and publication stage. Where repositories focus on curation and dissemination, policy engines focus on orchestration:</p>
 <ul>
 <li>coordinating multiple storage systems<br>
 </li>
 <li>attaching and querying metadata<br>
 </li>
-<li>enforcing rules (policies) for placement, replication, and retention<br>
+<li>enforcing rules (policies) for placement, replication, and <a href="./glossary.html#retention">retention</a><br>
 </li>
 <li>integrating with compute environments<br>
 </li>
 <li>supporting workflows that generate and transform data</li>
 </ul>
-<p>Because they operate on data that is still evolving, policy engines do not enforce rigid standards by default. Instead, they provide flexible mechanisms that can be shaped to different research domains, storage architectures, and workflow patterns. This flexibility also makes them harder to define precisely: they are not repositories, not workflow engines, and not storage systems but they coordinate all three.</p>
+<p>Because they operate on data that is still evolving, policy engines do not enforce rigid standards by default. Instead, they provide flexible mechanisms that can be shaped to different research domains, storage architectures, and workflow patterns. This flexibility also makes them harder to define precisely: they are not repositories, not <a href="./glossary.html#workflow-engines">workflow engines</a>, and not storage systems but they coordinate all three.</p>
 <section id="two-architectural-patterns-of-policy-engines" class="level2">
 <h2 class="anchored" data-anchor-id="two-architectural-patterns-of-policy-engines">Two Architectural Patterns of Policy Engines</h2>
 <p>Policy engines generally follow one of two architectural models. The distinction depends on how tightly they integrate with storage and how digital objects are formed.</p>
 <section id="storagecentric-engines" class="level3">
 <h3 class="anchored" data-anchor-id="storagecentric-engines">Storage‑centric engines</h3>
-<p>These engines sit directly in front of storage and become the single interface through which users upload data, add metadata, and trigger workflows. Because all data enters through the engine, it can immediately apply policies for placement, replication, retention, and provenance.</p>
+<p>These engines sit directly in front of storage and become the single interface through which users upload data, add metadata, and trigger workflows. Because all data enters through the engine, it can immediately apply policies for placement, replication, retention, and <a href="./glossary.html#provenance">provenance</a>.</p>
 <p>Digital objects are effectively formed at ingest:<br>
-as soon as a file arrives, the engine computes fixity, attaches metadata, assigns identifiers, and registers the object in its catalog.</p>
+as soon as a file arrives, the engine computes <a href="./glossary.html#fixity">fixity</a>, attaches metadata, assigns identifiers, and registers the object in its catalog.</p>
 <p>iRODS and Rucio (see below) both follow this model. They control storage behaviour through their own namespaces, catalogs, and rule systems, ensuring that all data movement and replication is policy‑driven.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Immediate digital‑object formation">
 <div class="callout-header d-flex align-content-center">
@@ -343,7 +343,7 @@ as soon as a file arrives, the engine computes fixity, attaches metadata, assign
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In storage‑centric engines, the digital object is created the moment the file enters the system.<br>
+<p>In storage‑centric engines, the <a href="./glossary.html#digital-object">digital object</a> is created the moment the file enters the system.<br>
 This guarantees that metadata, identifiers, and policies are applied consistently and early.</p>
 </div>
 </div>
@@ -666,7 +666,7 @@ Figure&nbsp;13.2: A user uploads a file to the policy engine. A replication poli
 </div>
 </div>
 </div>
-<p>When a file is uploaded, the policy engine applies a replication rule and writes copies to multiple storage systems. As each copy is created, the engine updates the metadata catalog, recording checksums, replica locations, and replica state. This ensures that all copies are linked as part of the same digital object and remain traceable across the infrastructure. By tying replication directly to the metadata catalog, the system maintains a consistent, governed view of the object rather than relying on storage‑level mirroring.</p>
+<p>When a file is uploaded, the policy engine applies a replication rule and writes copies to multiple storage systems. As each copy is created, the engine updates the metadata catalog, recording checksums, <a href="./glossary.html#replica">replica</a> locations, and replica state. This ensures that all copies are linked as part of the same digital object and remain traceable across the infrastructure. By tying replication directly to the metadata catalog, the system maintains a consistent, governed view of the object rather than relying on storage‑level mirroring.</p>
 </section>
 <section id="file-movement-to-cold-storage" class="level3">
 <h3 class="anchored" data-anchor-id="file-movement-to-cold-storage">File Movement to Cold Storage</h3>

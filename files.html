@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -303,21 +303,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Files are the <em>content</em> component of a digital object. This chapter examines how they behave and evolve across the research data life cycle.</p>
+<p><a href="./glossary.html#files">Files</a> are the <em>content</em> component of a <a href="./glossary.html#digital-object">digital object</a>. This chapter examines how they behave and evolve across the research data life cycle.</p>
 <section id="what-are-files-in-research-data-management" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-files-in-research-data-management">What Are Files in Research Data Management?</h2>
-<p>Every digital research project begins with files. They are the most immediate and tangible artefacts that researchers work with: a CSV exported from an instrument, a TIFF image from a microscope, a NetCDF model output, a PDF protocol, or a collection of scripts and notebooks. In Research Data Management (RDM), files are the basic units of digital content and the raw material from which more structured research outputs are eventually created.</p>
-<p>At this early stage, files function simply as containers of information. They are produced quickly, modified frequently, and organised in ways that suit the researcher’s workflow. Their purpose is to support active work rather than long‑term preservation. As a result:</p>
+<p>Every digital research project begins with files. They are the most immediate and tangible artefacts that researchers work with: a CSV exported from an instrument, a TIFF image from a microscope, a NetCDF model output, a PDF protocol, or a collection of scripts and notebooks. In Research Data Management (<a href="./glossary.html#rdm">RDM</a>), files are the basic units of digital content and the raw material from which more structured research outputs are eventually created.</p>
+<p>At this early stage, files function simply as containers of information. They are produced quickly, modified frequently, and organised in ways that suit the researcher’s workflow. Their purpose is to support active work rather than long‑term <a href="./glossary.html#preservation">preservation</a>. As a result:</p>
 <ul>
 <li>their organisation reflects workflow convenience,<br>
 </li>
 <li>they rarely have persistent identifiers (PIDs),<br>
 </li>
-<li>they are not yet accompanied by curated metadata,<br>
+<li>they are not yet accompanied by curated <a href="./glossary.html#metadata">metadata</a>,<br>
 </li>
-<li>metadata and provenance still need to be captured from the start.</li>
+<li>metadata and <a href="./glossary.html#provenance">provenance</a> still need to be captured from the start.</li>
 </ul>
-<p>This is where FAIR already matters. Early decisions about naming, formats, folder structures, and documentation directly influence how findable, accessible, interoperable, and reusable the data will be later when files are eventually curated and published.</p>
+<p>This is where <a href="./glossary.html#fair">FAIR</a> already matters. Early decisions about naming, formats, folder structures, and documentation directly influence how findable, accessible, interoperable, and reusable the data will be later when files are eventually curated and published.</p>
 </section>
 <section id="a-fictive-example-of-a-datasets-file-components" class="level2">
 <h2 class="anchored" data-anchor-id="a-fictive-example-of-a-datasets-file-components">A Fictive Example of a Dataset’s File Components</h2>
@@ -458,7 +458,7 @@ Figure&nbsp;6.1: Conceptual progression from working files to stabilised files, 
 </div>
 <p>This progression is not strictly linear. Files can be demoted back to an earlier stage — for example, when an experiment fails or a result is invalidated. Likewise, multiple copies of the same file may diverge, leading to different paths through the progression as they are cleaned, analysed, or curated in different ways.</p>
 <p>Research, therefore, moves through the data life cycle not only in a forward direction. Each stage can connect back to earlier stages, reflecting the iterative, exploratory, and corrective nature of research practice.</p>
-<p>The exception is the <em>published</em> Digital Object: once published, it must remain persistently available, citable, and resolvable. Publication policies prevent the object itself from being demoted or withdrawn from the life cycle. However, its content may still change through updates, corrections, or new versions, and its persistent identifier may continue to resolve even if the underlying files are removed or replaced. In such cases, the PID acts as a “tombstone” - ensuring that the published object’s identity and citation remain intact even when its content is no longer available. <a href="./pids.html#how-does-a-pid-work">Later chapters</a> discuss how <em>tombstoning</em>, and PID policies support this guarantee.</p>
+<p>The exception is the <em>published</em> Digital Object: once published, it must remain persistently available, citable, and resolvable. Publication policies prevent the object itself from being demoted or withdrawn from the life cycle. However, its content may still change through updates, corrections, or new versions, and its persistent identifier may continue to resolve even if the underlying files are removed or replaced. In such cases, the <a href="./glossary.html#pid">PID</a> acts as a “tombstone” - ensuring that the published object’s identity and <a href="./glossary.html#citation">citation</a> remain intact even when its content is no longer available. <a href="./pids.html#how-does-a-pid-work">Later chapters</a> discuss how <em>tombstoning</em>, and PID policies support this guarantee.</p>
 <section id="process-active-research-and-working-copies" class="level3">
 <h3 class="anchored" data-anchor-id="process-active-research-and-working-copies">Process — Active Research and Working Copies</h3>
 <p>During the Process stage, researchers generate and modify files rapidly: raw instrument outputs, logs, temporary results, scripts, and notebooks. These files typically live on local machines, lab servers, or compute systems such as HPC clusters or cloud VMs.</p>
@@ -477,7 +477,7 @@ Figure&nbsp;6.1: Conceptual progression from working files to stabilised files, 
 </li>
 <li><strong>more durable storage</strong> (project shares, institutional storage, version‑controlled repositories).</li>
 </ul>
-<p>Working copies support efficient computation, but they are not a substitute for durable storage. Files left only on scratch space are at high risk of loss.</p>
+<p>Working copies support efficient computation, but they are not a substitute for durable storage. Files left only on <a href="./glossary.html#scratch">scratch</a> space are at high risk of loss.</p>
 </section>
 </section>
 <section id="analyse-derivation-modelling-transformation" class="level2">
@@ -497,18 +497,18 @@ Figure&nbsp;6.1: Conceptual progression from working files to stabilised files, 
 </li>
 <li>and recognised as research outputs.</li>
 </ul>
-<p>This is the ideal moment to begin linking files, metadata, and persistent identifiers by coordinating storage solutions with metadata services, workflow engines, and institutional catalogues. Early alignment makes later archiving and publication far smoother.</p>
+<p>This is the ideal moment to begin linking files, metadata, and persistent identifiers by coordinating storage solutions with metadata services, <a href="./glossary.html#workflow-engines">workflow engines</a>, and institutional catalogues. Early alignment makes later archiving and publication far smoother.</p>
 </section>
 <section id="archived-longterm-retention-as-digital-objects" class="level2">
 <h2 class="anchored" data-anchor-id="archived-longterm-retention-as-digital-objects">Archived — Long‑Term Retention as Digital Objects</h2>
 <p>By the Archived stage, key files have stabilised and are formally assembled into digital objects, marking the first step of the archiving process. The focus shifts from active analysis to durability, integrity, and long‑term stewardship. Files move into preservation‑oriented storage, while their metadata and persistent identifiers are registered and linked so the digital object remains coherent across systems.</p>
 <p>Archived files emphasise:</p>
 <ul>
-<li>long‑term retention,<br>
+<li>long‑term <a href="./glossary.html#retention">retention</a>,<br>
 </li>
 <li>stable internal structure,<br>
 </li>
-<li>fixity,<br>
+<li><a href="./glossary.html#fixity">fixity</a>,<br>
 </li>
 <li>migration to preservation‑oriented storage.</li>
 </ul>

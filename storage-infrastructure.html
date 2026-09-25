@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ea80afa682c8f5c213c08d6776a1bd3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3335f0b7645ccffbcabf11c42b1ad0be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -292,11 +292,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Having established the three conceptual pillars of research data management — files, metadata, and persistent identifiers — we can turn to the technical foundation that supports them.</p>
+<p>Having established the three conceptual pillars of research data management — <a href="./glossary.html#files">files</a>, <a href="./glossary.html#metadata">metadata</a>, and persistent identifiers — we can turn to the technical foundation that supports them.</p>
 <p>Storage infrastructure is the environment in which files physically reside and persist over time. It keeps the underlying bits (bitstream) safe, but it does not create or manage digital objects. That work is done by repositories and policy engines, which operate above storage and use metadata and PIDs to give files identity, structure, and meaning.</p>
 <p>Storage systems ensure that:</p>
 <ul>
-<li>files remain <strong>intact</strong> (fixity and integrity checking)<br>
+<li>files remain <strong>intact</strong> (<a href="./glossary.html#fixity">fixity</a> and integrity checking)<br>
 </li>
 <li>files remain <strong>available</strong> (redundancy and replication)<br>
 </li>
@@ -304,14 +304,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>files remain <strong>usable</strong> (format migration and media refresh)</li>
 </ul>
-<p>Storage is therefore the technical substrate of preservation. It protects the bits.<br>
+<p>Storage is therefore the technical substrate of <a href="./glossary.html#preservation">preservation</a>. It protects the bits.<br>
 But it does not:</p>
 <ul>
 <li>assign or manage persistent identifiers<br>
 </li>
 <li>maintain metadata<br>
 </li>
-<li>track provenance<br>
+<li>track <a href="./glossary.html#provenance">provenance</a><br>
 </li>
 <li>enforce access policies<br>
 </li>
@@ -322,11 +322,6 @@ But it does not:</p>
 <h2 class="anchored" data-anchor-id="storage-types-commonly-used-in-rdm">Storage Types Commonly Used in RDM</h2>
 <p>Different storage systems provide different guarantees for durability, speed, cost, and resilience.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 37%">
-<col style="width: 30%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Storage Type</th>
@@ -347,7 +342,7 @@ But it does not:</p>
 </tr>
 <tr class="odd">
 <td><strong>Tape archives</strong></td>
-<td>Low cost, long retention, slower access</td>
+<td>Low cost, long <a href="./glossary.html#retention">retention</a>, slower access</td>
 <td>Long‑term preservation of files</td>
 </tr>
 <tr class="even">
@@ -377,7 +372,7 @@ Storage systems store files. They do not manage digital objects.</p>
 </ul>
 <p>Without robust storage, even the best‑described digital objects are at risk of loss or degradation.</p>
 <p>But storage alone is not enough.<br>
-To become a digital object, a file must be:</p>
+To become a <a href="./glossary.html#digital-object">digital object</a>, a file must be:</p>
 <ul>
 <li>registered in a repository or policy engine<br>
 </li>
