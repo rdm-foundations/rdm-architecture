@@ -2,7 +2,7 @@ project:
   type: book
 
   pre-render:
-    - python3 _python_helpers/make_full_glossary.py -i glossary.yml -o glossary.qmd
+    - python3 _python_helpers/make_full_glossary.py -i glossary-terms.yml -o glossary.qmd
 
 execute:
     enabled: false
