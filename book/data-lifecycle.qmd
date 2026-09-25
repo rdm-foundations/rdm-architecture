@@ -41,7 +41,7 @@ The FAIR Principles — _Findable, Accessible, Interoperable, Reusable_ — prov
 
 ## Connecting FAIR and the RDM Life Cycle
 
-The {{< glossary "RDM Life Cycle" >}} describes how data evolves, while the {{< glossary "FAIR" >}} principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.
+The RDM Life Cycle describes how data evolves, while the FAIR" principles describe the qualities data must exhibit to remain usable by humans and machines. These two perspectives are complementary: one focuses on change, the other on usability.
 
 A key insight is that FAIR does not “switch on” only at publication. Its scope shifts as data matures. Initially, FAIR supports collaboration and internal organisation. Later, it supports stewardship, preservation, and ultimately global reuse.
 
@@ -299,7 +299,7 @@ In the Active state, rapid iteration and collaboration dominate. Files change fr
 
 FAIR here is practical and inward‑facing: clear naming, shared access points, open formats, and well‑maintained notebooks that support reproducible teamwork.
 
-- **Typical services**: {{< glossary Scratch display="HPC scratch"  >}}, project storage, {{< glossary ELN display="Elab Journals"  >}}, version control.
+- **Typical services**: HPC scratch, project storage, Elab Journals, version control.
 
 - **Audience**: research team
 
@@ -311,7 +311,7 @@ During the Closed stage, data becomes sufficiently stable for structured organis
 
 The Locked state then acts as a buffer. Stabilised data is frozen in a read‑only condition, protected against accidental changes while retention and appraisal take place. FAIR remains minimal but essential, ensuring the data stays intelligible and manageable even in inactivity.
 
-- **Typical services**: {{< glossary "Tape Library" >}}, {{< glossary "Cold Storage" >}}, {{< glossary Retention display="Retention Systems"  >}}, {{< glossary "Workflow Engines" >}}, Metadata Templates.
+- **Typical services**: Tape Library, Cold Storage, Retention Systems, Workflow Engines, Metadata Templates.
 
 - **Audience**: research team + institutional stewards
 
