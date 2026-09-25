@@ -1,15 +1,15 @@
 # Metadata
 
-As digital objects take shape, they require more than stable files and durable storage. They need structured information that makes them discoverable and intelligible beyond the immediate research context. This is the role of metadata, which we will explore in this chapter.
+As digital objects take shape, they require more than stable [files](glossary.qmd#files) and durable storage. They need structured information that makes them discoverable and intelligible beyond the immediate research context. This is the role of [metadata](glossary.qmd#metadata), which we will explore in this chapter.
 
 ## What Is Metadata in Research Data Management?
 
-In the context of Research Data Management, metadata is structured information that describes, explains, and contextualises a digital object such as a dataset, document, image, or software file. It acts as a layer of documentation that makes a digital object findable, understandable, and reusable, both now and in the future.
+In the context of Research Data Management, [metadata](glossary.qmd#metadata) is structured information that describes, explains, and contextualises a [digital object](glossary.qmd#digital-object) such as a dataset, document, image, or software file. It acts as a layer of documentation that makes a [digital object](glossary.qmd#digital-object) findable, understandable, and reusable, both now and in the future.
 
-Metadata typically captures:
+[Metadata](glossary.qmd#metadata) typically captures:
 
 * Content information — what the object contains
-* Provenance — how, when, and by whom it was created or modified
+* [Provenance](glossary.qmd#provenance) — how, when, and by whom it was created or modified
 * Technical characteristics — file formats, structures, and software requirements
 * Administrative information — rights, licences, and access conditions
 * Relationships — links to other versions, datasets, or publications
@@ -34,7 +34,7 @@ In short, metadata provides the context needed to interpret and reuse data beyon
 | **Description**         | Measurements of soil moisture across multiple sites in the Netherlands over three years.                                               |
 | **Keywords / Subject**  | soil moisture, hydrology, climate                                                                                                      |
 | **License**             | CC BY 4.0                                                                                                                              |
-| **Provenance**          | Collected using sensor network; cleaned and validated by research team; processed using R scripts version 4.2                          |
+| **[Provenance](glossary.qmd#provenance)**          | Collected using sensor network; cleaned and validated by research team; processed using R scripts version 4.2                          |
 | **Dataset DOI**         | 10.5281/zenodo.1234567                                                                                                                 |
 | **Domain Detail (DDI)** | Variable-level metadata: `soil_moisture`, `temperature`, `precipitation`; measurement units, missing values, coding scheme documented. |
 | **Domain Detail (ISA)** | Assay-level metadata for soil sensors: sensor type, calibration protocol, data logger model, measurement frequency.                    |
@@ -60,7 +60,7 @@ In short, metadata provides the context needed to interpret and reuse data beyon
 | **License**                  | MIT License                                                                                                                                              |
 | **Repository / DOI**         | [https://github.com/soil-data/cleaning-script](https://github.com/soil-data/cleaning-script) or DOI: 10.5281/zenodo.7654321                              |
 | **Dependencies**             | R packages: tidyverse 1.4.3, lubridate 1.9.0                                                                                                             |
-| **Provenance**               | Developed as part of Soil Moisture Project 2020–2023; tested on dataset version 3; last updated March 2024                                               |
+| **[Provenance](glossary.qmd#provenance)**               | Developed as part of Soil Moisture Project 2020–2023; tested on dataset version 3; last updated March 2024                                               |
 | **Domain Detail (CodeMeta)** | `softwareRequirements`: R 4.2; `programmingLanguage`: R; `codeRepository`: GitHub; `maintainer`: Anna Vermeer                                            |
 | **Domain Detail (ISA)**      | If linked to experimental workflows: script applied to *assay-level data* (sensor readings), preserving measurement protocols and calibration details. |
 
@@ -79,7 +79,7 @@ They:
 
 * Provide standardised terms for describing concepts
 * Reduce ambiguity (e.g., “soil moisture” vs. “soil humidity”)
-* Improve searchability and interoperability
+* Improve searchability and [interoperability](glossary.qmd#interoperability)
 
 #### Examples
 
@@ -204,7 +204,7 @@ digraph do_mesh {
 
 Together, these representations show how controlled vocabularies provide stable terminology, while ontologies add semantic structure that enables richer connections between concepts and datasets.
 
-If ontologies describe the meaning of concepts and the relationships between them, metadata schemas address a different question: which pieces of information should be captured when describing a digital object.
+If ontologies describe the meaning of concepts and the relationships between them, metadata schemas address a different question: which pieces of information should be captured when describing a [digital object](glossary.qmd#digital-object).
 
 ## Metadata Schemas
 
@@ -318,7 +318,7 @@ It provides a straightforward way to describe digital objects, but it offers lim
 ### Linked Data
 
 Linked Data is a more advanced, semantic approach that represents metadata as interconnected statements.
-It is most useful when metadata needs to express relationships, connect to external vocabularies, or grow without restructuring. Key–value formats work well for simple descriptions, but Linked Data supports richer semantics, interoperability, and long‑term extensibility.
+It is most useful when metadata needs to express relationships, connect to external vocabularies, or grow without restructuring. Key–value formats work well for simple descriptions, but Linked Data supports richer semantics, [interoperability](glossary.qmd#interoperability), and long‑term extensibility.
 This richer structure allows metadata to be connected across systems, enabling more powerful discovery and integration.
 
 #### Core idea
@@ -522,7 +522,7 @@ the authoritative definition of the Dublin Core `title` property.
 
 By giving each entity, i.e. dataset, person, organisation and concept its own URI, the graph becomes a reusable and extensible structure. Machines can infer relationships, merge graphs, or enrich them with external knowledge. While it is technically possible to use URIs as keys in key–value metadata, such formats lack the semantics and inference capabilities that RDF provides.
 
-We explore metadata serialisation and metadata infrastructure in more detail in the chapter [Metadata Infrastructure](metadata-portals.qmd).
+We explore metadata serialisation and metadata infrastructure in more detail in the chapter [Metadata Infrastructure](metadata-infrastructure.qmd).
 
 ## Bringing It All Together
 
@@ -572,14 +572,14 @@ Why it’s useful:
 Role: Adds semantic provenance and process context.
 
 
-### Discipline-Specific Schema - [Data Documentation Initiative](https://ddialliance.org/)
+### Discipline-Specific Schema -  37 
 
 Data Documentation Initiative (DDI) organises metadata into three main levels:
 
 | Level              | What it describes            | Examples                                    |
 | ------------------ | ---------------------------- | ------------------------------------------- |
 | **Study level**    | The overall research project | Title, investigators, methodology, sampling |
-| **Dataset level**  | The data files               | File format, number of variables, version   |
+| **Dataset level**  | The data [files](glossary.qmd#files)               | File format, number of variables, version   |
 | **Variable level** | Individual variables         | Question text, response categories, coding  |
 
 The **variable level** is what makes DDI especially powerful.
@@ -679,7 +679,7 @@ Role: Provides deep, field-specific context.
 | Provenance          | How was it created?           | PROV-O                                     |
 | Domain detail       | What does it mean in context? | DDI (social sciences), ISA (life sciences) |
 
-Together, these layers create rich, FAIR, and interoperable metadata. With them in place, metadata becomes both meaningful within its discipline and interoperable across the wider research landscape.
+Together, these layers create rich, [FAIR](glossary.qmd#fair), and interoperable metadata. With them in place, metadata becomes both meaningful within its discipline and interoperable across the wider research landscape.
 
 In this chapter we introduced URIs as globally unique identifiers for concepts, properties, and relationships within semantic metadata. These identifiers help machines understand what a term refers to and how different entities are connected.
 To make research objects themselves—datasets, software, publications, instruments, samples—equally stable and unambiguous, we need identifiers that serve the same purpose at the data object level and remain reliable over time, even as locations or infrastructures change.
