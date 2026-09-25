@@ -173,19 +173,28 @@ def link_terms_in_text(text, terms, term_regex, glossary_file, link_all):
     return new_text, count
 
 
-def link_terms_in_files(glossary, docs_dir, glossary_file, link_all, dry_run):
+def link_terms_in_files(glossary, docs_dir, glossary_file, link_all, dry_run, single_file=None):
     terms = {term: slugify(term) for term in glossary.keys()}
     term_regex = build_term_regex(terms)
 
-    docs_dir = Path(docs_dir)
     glossary_basename = Path(glossary_file).name
 
-    qmd_files = sorted(docs_dir.rglob(FILE_GLOB))
-    qmd_files = [f for f in qmd_files if f.name != glossary_basename]
+    if single_file is not None:
+        qmd_files = [Path(single_file)]
+        if qmd_files[0].name == glossary_basename:
+            print(f"Skipping {qmd_files[0]}: it is the glossary file itself.")
+            return
+        if not qmd_files[0].exists():
+            print(f"File not found: {qmd_files[0]}")
+            return
+    else:
+        docs_dir = Path(docs_dir)
+        qmd_files = sorted(docs_dir.rglob(FILE_GLOB))
+        qmd_files = [f for f in qmd_files if f.name != glossary_basename]
 
-    if not qmd_files:
-        print(f"No {FILE_GLOB} files found under {docs_dir} (besides the glossary itself).")
-        return
+        if not qmd_files:
+            print(f"No {FILE_GLOB} files found under {docs_dir} (besides the glossary itself).")
+            return
 
     total_links = 0
     for path in qmd_files:
@@ -225,7 +234,13 @@ def main():
         "--docs-dir",
         default=".",
         help="Directory to search for .qmd files when --link-terms is used "
-        "(recursive). Default: current dir.",
+        "(recursive). Default: current dir. Ignored if --file is given.",
+    )
+    parser.add_argument(
+        "--file",
+        default=None,
+        help="With --link-terms: link terms in just this one .qmd file, "
+        "instead of scanning --docs-dir.",
     )
     parser.add_argument(
         "--link-all",
@@ -252,6 +267,7 @@ def main():
             glossary_file=args.output,
             link_all=args.link_all,
             dry_run=args.dry_run,
+            single_file=args.file,
         )
 
 
