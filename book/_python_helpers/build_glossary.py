@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """
-build_glossary.py
-
 1. Reads glossary terms from a YAML file and writes an alphabetically
-   grouped glossary.qmd (same as before), with each term wrapped in
+   grouped glossary.qmd, with each term wrapped in
    <span id="..."></span> so it can be linked to.
 2. Scans all other .qmd files in a directory and turns plain-text mentions
    of those terms into links, e.g.:
@@ -43,9 +41,6 @@ from pathlib import Path
 
 import yaml
 
-# --------------------------------------------------------------------------
-# Config
-# --------------------------------------------------------------------------
 LINK_ALL_OCCURRENCES_DEFAULT = False  # only first mention per file gets linked
 FILE_GLOB = "*.qmd"
 
@@ -97,9 +92,7 @@ def write_qmd(glossary, output_path):
             out.write("\n")
 
 
-# --------------------------------------------------------------------------
 # Region protection: mask out spans we must not touch, restore afterwards
-# --------------------------------------------------------------------------
 PROTECT_PATTERNS = [
     re.compile(r"^---\n.*?\n---\n", re.DOTALL),          # YAML frontmatter
     re.compile(r"```.*?```", re.DOTALL),                  # fenced code blocks
@@ -129,9 +122,6 @@ def unmask_protected_regions(text, stash):
     return text
 
 
-# --------------------------------------------------------------------------
-# Term linking
-# --------------------------------------------------------------------------
 def build_term_regex(terms):
     """terms: dict {term: slug}"""
     # Longest term first so multi-word terms are matched before their
