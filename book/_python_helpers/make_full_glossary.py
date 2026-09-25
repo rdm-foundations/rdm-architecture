@@ -3,6 +3,8 @@ import yaml
 import argparse
 from pathlib import Path
 from collections import defaultdict
+import re
+
 
 def load_glossary(path):
     with open(path, "r") as f:
@@ -34,7 +36,14 @@ def write_qmd(glossary, output_path):
 
             for term in groups[letter]:
                 definition = glossary[term].get("def", "").replace("\n", " ").strip()
-                out.write(f"| {term} | {definition} |\n")
+                
+                # Create a clean, url-friendly ID (lowercased, spaces to dashes, removes special chars)
+                gidx = term.lower().strip()
+                gidx = re.sub(r'[^a-z0-9\s-]', '', gidx)
+                gidx = re.sub(r'[\s-]+', '-', gidx)
+                
+                # Injected the <span id="..."> tag right before the term name
+                out.write(f"| <span id=\"{gidx}\"></span>{term} | {definition} |\n")
 
             out.write("\n")
 
