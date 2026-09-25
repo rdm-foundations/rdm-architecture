@@ -3,6 +3,7 @@ project:
 
   pre-render:
     - python3 _python_helpers/build_glossary.py -i glossary-terms.yml -o glossary.qmd --docs-dir . --link-terms
+
 execute:
     enabled: false
 
