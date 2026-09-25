@@ -1,12 +1,12 @@
+name: Quarto Publish
+
 on:
   workflow_dispatch:
   push:
     branches: main
-    paths: 
+    paths:
       - 'book/**.qmd'
       - 'book/**.yml'
-
-name: Quarto Publish
 
 jobs:
   build-deploy:
@@ -21,8 +21,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
       - name: Install dependencies
-          run: pip install pyyaml
+        run: pip install pyyaml
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
