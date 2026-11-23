@@ -1,41 +1,46 @@
-# Persistent Identifiers
+---
+title: "Persistent Identifiers?"
+format: html
+---
 
 Metadata gives digital objects structure and meaning; Persistent Identifiers give those objects a stable identity that can be referenced over time.
 
-## What are Persistent Identifiers
-
-Persistent Identifiers (PIDs) are long‑lasting references used to uniquely identify digital objects such as research papers, datasets, or software. PIDs can also be applied to digital representations of physical objects such as paintings, researchers, instruments, and concepts like research projects, grants, or institutions. Unlike regular web links that may break or change over time, PIDs are designed to remain stable and consistently point to the correct resource, even if its location on the internet changes.
-
-A PID works by assigning a unique identifier to an object and linking it to a record that stores important information about that object, such as its title, creator, and most importantly its current location. You can think of the so-called PID entry as an ID card or at least an address book for the object.
-Like with your own ID card, you need to update that metadata. For example, if the object moves to a different website or repository, the metadata behind the PID needs to be updated so that the identifier continues to point to the correct place.
-
-By providing stable, machine-readable references, PIDs help ensure that digital resources remain accessible, traceable, and properly attributed over time.
-
+## What are Persistent Identifiers?
+ 
+Persistent Identifiers (PIDs) are long-lasting references that uniquely identify digital objects such as research papers, datasets, or software. They can also identify digital representations of physical objects (e.g. paintings), as well as people, instruments, and abstract entities like research projects, grants, or institutions.
+ 
+Unlike ordinary web links, which break when content moves or sites are restructured, PIDs are backed by an organisation that commits to keeping the identifier meaningful and resolvable over time, even if the object's location changes.
+ 
+A [PID](https://rdm-foundations.github.io/rdm-architecture/glossary.html#pid) works by assigning a unique identifier to an object and linking it to a record that holds key information about it, such as its title, creator, and, most importantly, its current location. Think of this PID record as an ID card, or an address book entry, for the object. And just like a real ID card, it needs to be kept up to date: if the object moves to a different website or repository, the record behind the PID must be updated so the identifier still leads to the right place.
+ 
+By providing stable, machine-readable references, PIDs keep digital resources accessible, traceable, and properly attributed over time.
+ 
 ::: {.callout-tip title="Examples"}
-Articles & Datasets: [Digital Object Identifiers (DOI)](https://www.doi.org/the-identifier/what-is-a-doi/)
-
-People: [ORCID iD](https://orcid.org/)
-
-Institutions: [Research Organisation Registry (ROR)](https://ror.org/)
+- **Articles & datasets:** [Digital Object Identifiers (DOI)](https://www.doi.org/the-identifier/what-is-a-doi/)
+- **People:** [ORCID iD](https://orcid.org/)
+- **Institutions:** [Research Organisation Registry (ROR)](https://ror.org/)
 :::
-
-## Why not simply use Uniform Resource Locations (URLs)?
-
-In the context of Persistent Identifiers, the distinction between URLs and URIs becomes important. A URL (Uniform Resource Locator) points to the current location of a resource on the web. A URI (Uniform Resource Identifier) is broader: it identifies a resource without necessarily specifying where it is located. Many PIDs are implemented as URIs because they provide a stable identity for an object, even when its location changes.
-
-
-
-| Type                                  | Example                                                 | What it does                                                                                                                                 |
-| ------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **URL (Uniform Resource Locator)**    | `https://www.nature.com/articles/nphys1170`             | The actual web address where the resource is currently located.                                                                          |
-| **URI (Uniform Resource Identifier)** | `urn:isbn:9780131101630`                                | Identifies a resource (in this case a book by its ISBN) but does not necessarily tell you where to find it online.                       |
-| **PID (Persistent Identifier)**       | `10.1038/nphys1170` (a Digital Object Identifier (DOI)) | A long-lasting identifier for a digital object such as a research article. It stays the same even if the location of the object changes. |
-
-
-::: {.callout-tip title="PIDs in a nutshell"}
-The *persistent* aspect of a PID is the identifier, it MUST NOT change. The location and even the content of the object it identifies can change over time. Also when the object is deleted, the PID continues to exist.
+ 
+## Why not simply use URLs?
+ 
+Three related terms are easy to confuse:
+ 
+- A **URL** (Uniform Resource Locator) tells you *where* a resource is currently located on the web.
+- A **URI** (Uniform Resource Identifier) is the broader category: it *identifies* a resource, and may or may not say where to find it. Every URL is a URI, but not every URI is a URL.
+- A **PID** is an identifier backed by a *commitment to persistence*: a registry, a resolution service, and policies for handling moved or withdrawn objects. Most PIDs are expressed as URIs, but being a URI does not make something a PID.
+ 
+| Term | Example | What it tells you |
+|---|---|---|
+| URL | `https://www.nature.com/articles/nphys1170` | Where the article is *right now*. If the publisher restructures its site, this link may break. |
+| URI (non-URL) | `urn:isbn:9780131101630` | Which book is meant (by ISBN), without saying where to find it online. |
+| PID | `10.1038/nphys1170` (a [Digital Object](https://rdm-foundations.github.io/rdm-architecture/glossary.html#digital-object) Identifier, or DOI), resolvable as `https://doi.org/10.1038/nphys1170` | A stable identifier maintained by a registry. It keeps working even if the article's location changes, because the record behind it is updated. |
+ 
+: URL vs. URI vs. PID {.striped}
+ 
+::: {.callout-note}
+The DOI above is itself a URI (and, in its `https://doi.org/...` form, a URL). It is a PID because of the infrastructure and commitment behind it, not because of its syntax.
 :::
-
+ 
 ## How does a PID work?
 
 A PID typically works through a resolution system or resolver:
